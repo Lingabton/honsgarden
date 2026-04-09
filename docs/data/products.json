@@ -5,6 +5,7 @@
     "brand": "ChickenGuard",
     "score": 8.5,
     "price_sek": 2080,
+    "price_note": "Uppskattat pris, ej verifierat i svensk butik april 2026",
     "power": "solar",
     "wifi": false,
     "app_control": false,
@@ -17,26 +18,27 @@
     "weight_g": 800,
     "warranty_years": 3,
     "buy_urls": [
-      {"store": "Djursajten", "url": "#", "affiliate": true}
+      {"store": "ChickenGuard.com", "url": "#", "affiliate": true}
     ],
     "pros": ["Hållbart material", "Solcell", "3 års garanti"],
-    "cons": ["Lucka säljs separat", "Ingen WiFi"],
+    "cons": ["Lucka säljs separat", "Ingen WiFi", "Svår att köpa i Sverige"],
     "badge": "best-overall",
     "summary": "Pålitlig solcellsdriven öppnare med anti-pinch och tre års garanti. Saknar WiFi men kompenserar med hållbart material och stabil funktion."
   },
   {
-    "id": "chickenguard-pro",
-    "name": "ChickenGuard Extreme Auto",
+    "id": "chickenguard-premium-eco",
+    "name": "ChickenGuard Premium Eco",
     "brand": "ChickenGuard",
     "score": 7.8,
-    "price_sek": 1499,
+    "price_sek": 1780,
+    "price_note": "Verifierat via Djursajten april 2026",
     "power": "batteri",
     "wifi": false,
     "app_control": false,
     "anti_pinch": true,
-    "min_temp_c": -30,
+    "min_temp_c": -20,
     "battery_mah": null,
-    "material": "Plast",
+    "material": "Återvunnen plast",
     "door_included": false,
     "door_type": "vertikal",
     "weight_g": 600,
@@ -44,17 +46,18 @@
     "buy_urls": [
       {"store": "Djursajten", "url": "#", "affiliate": true}
     ],
-    "pros": ["Klarar -30°C", "Anti-pinch", "Bra pris"],
+    "pros": ["Återvunnet material", "Anti-pinch", "3 års garanti", "Tillgänglig i Sverige"],
     "cons": ["Lucka säljs separat", "Ingen WiFi", "Batteridrift"],
     "badge": "best-winter",
-    "summary": "Bästa valet för nordliga förhållanden. Klarar extremt kalla temperaturer ner till -30°C."
+    "summary": "Populäraste ChickenGuard-modellen i Sverige. Återvunnen plast, anti-pinch och pålitlig timer/ljusstyrning."
   },
   {
-    "id": "kerbl-compensation-door",
-    "name": "Kerbl Automatisk Hönslucka",
+    "id": "kerbl-komplett",
+    "name": "Kerbl Automatisk Hönslucka Komplett",
     "brand": "Kerbl",
     "score": 7.2,
-    "price_sek": 899,
+    "price_sek": 1899,
+    "price_note": "Verifierat via Hylte Jakt & Lantman, Granngården april 2026",
     "power": "batteri",
     "wifi": false,
     "app_control": false,
@@ -67,19 +70,21 @@
     "weight_g": 1200,
     "warranty_years": 2,
     "buy_urls": [
-      {"store": "VetZoo", "url": "#", "affiliate": true}
+      {"store": "Granngården", "url": "#", "affiliate": true},
+      {"store": "Hylte Jakt & Lantman", "url": "#", "affiliate": true}
     ],
-    "pros": ["Billigast", "Lucka ingår", "Enkel montering"],
+    "pros": ["Komplett med lucka", "Bred tillgänglighet i Sverige", "Timer + ljussensor"],
     "cons": ["Ingen anti-pinch", "Klarar bara -10°C", "Ingen WiFi"],
-    "badge": "best-budget",
-    "summary": "Bäst för budgetmedvetna. Lucka ingår i priset och monteringen tar under 30 minuter."
+    "badge": null,
+    "summary": "Komplett paket med lucka från tyskt kvalitetsvarumärke. Finns hos de flesta svenska lanthandlare."
   },
   {
     "id": "omlet-autodoor",
-    "name": "Omlet Automatisk Lucköppnare",
+    "name": "Omlet Smart Automatic Door",
     "brand": "Omlet",
     "score": 8.8,
-    "price_sek": 2990,
+    "price_sek": 2490,
+    "price_note": "Baserat på $229 USD, omräknat. Kolla omlet.se för aktuellt pris",
     "power": "batteri",
     "wifi": true,
     "app_control": true,
@@ -95,9 +100,9 @@
       {"store": "Omlet.se", "url": "#", "affiliate": true}
     ],
     "pros": ["WiFi + app-styrning", "Premium-känsla", "Lucka ingår", "Anti-pinch"],
-    "cons": ["Dyrt", "Bara -15°C", "Passar bara Omlet-hönshus"],
+    "cons": ["Dyrt", "Bara -15°C", "Passar främst Omlet-hönshus"],
     "badge": "best-smart",
-    "summary": "Mest avancerade alternativet med WiFi och app-styrning. Premium-känsla men begränsad kompatibilitet."
+    "summary": "Mest avancerade alternativet med WiFi och app-styrning. Premium-känsla men begränsad kompatibilitet med andra hönshus."
   },
   {
     "id": "run-chicken-t50",
@@ -105,12 +110,13 @@
     "brand": "Run Chicken",
     "score": 7.5,
     "price_sek": 1299,
-    "power": "solar",
+    "price_note": "Uppskattat utifrån internationellt pris, säljs via Amazon",
+    "power": "batteri",
     "wifi": false,
-    "app_control": false,
+    "app_control": true,
     "anti_pinch": true,
     "min_temp_c": -20,
-    "battery_mah": 1200,
+    "battery_mah": null,
     "material": "Aluminium",
     "door_included": true,
     "door_type": "vertikal",
@@ -119,17 +125,18 @@
     "buy_urls": [
       {"store": "Amazon.se", "url": "#", "affiliate": true}
     ],
-    "pros": ["Solcell + backup-batteri", "Lucka ingår", "Aluminium"],
-    "cons": ["Kort garanti", "Okänt varumärke i Sverige"],
+    "pros": ["Bluetooth app-styrning", "Lucka ingår", "Aluminium", "Anti-pinch"],
+    "cons": ["Kort garanti", "Batteridrift (AA)", "Begränsad svensk support"],
     "badge": null,
-    "summary": "Prisvärd solcellsdriven med lucka inkluderad. Bra kombination av sol och batteri-backup."
+    "summary": "Prisvärd med app-styrning via Bluetooth. Lucka i aluminium ingår. Säljs främst via Amazon."
   },
   {
-    "id": "brinsea-chickguard",
-    "name": "Brinsea ChickGuard Eco",
+    "id": "brinsea-chicksafe-eco",
+    "name": "Brinsea ChickSafe Eco",
     "brand": "Brinsea",
     "score": 6.8,
     "price_sek": 1150,
+    "price_note": "Uppskattat pris, begränsad tillgänglighet i Sverige april 2026",
     "power": "batteri",
     "wifi": false,
     "app_control": false,
@@ -142,19 +149,20 @@
     "weight_g": 500,
     "warranty_years": 2,
     "buy_urls": [
-      {"store": "Granngården", "url": "#", "affiliate": true}
+      {"store": "Amazon.se", "url": "#", "affiliate": true}
     ],
-    "pros": ["Lätt", "Enkel programmering", "Pålitlig"],
-    "cons": ["Ingen anti-pinch", "Lucka säljs separat", "Plastigt utseende"],
+    "pros": ["Lätt", "Enkel programmering", "Pålitligt varumärke (kläckmaskiner)"],
+    "cons": ["Ingen anti-pinch", "Lucka säljs separat", "Svår att hitta i Sverige"],
     "badge": null,
-    "summary": "Enkel och pålitlig grundmodell. Gör jobbet utan krusiduller."
+    "summary": "Enkel och pålitlig grundmodell från kläckmaskin-specialisten Brinsea. Gör jobbet utan krusiduller."
   },
   {
     "id": "vevor-auto-door",
     "name": "VEVOR Automatisk Hönslucka",
     "brand": "VEVOR",
     "score": 6.2,
-    "price_sek": 599,
+    "price_sek": 549,
+    "price_note": "Liknande produkt (VOFF) säljs för 495 kr. VEVOR-pris uppskattat",
     "power": "batteri",
     "wifi": false,
     "app_control": false,
@@ -167,36 +175,38 @@
     "weight_g": 1100,
     "warranty_years": 1,
     "buy_urls": [
-      {"store": "Amazon.se", "url": "#", "affiliate": true}
+      {"store": "VEVOR.com", "url": "#", "affiliate": true}
     ],
     "pros": ["Billigast av alla", "Lucka ingår", "Aluminium"],
     "cons": ["Dålig vinterprestanda", "Kort garanti", "Tveksam hållbarhet"],
-    "badge": null,
+    "badge": "best-budget",
     "summary": "Budget-alternativet. Fungerar men räkna inte med att den håller mer än ett par säsonger."
   },
   {
-    "id": "chickcozy-smart",
-    "name": "ChickCozy Smart Door",
+    "id": "chickcozy-solar",
+    "name": "ChickCozy Solar Automatic Door",
     "brand": "ChickCozy",
     "score": 7.9,
-    "price_sek": 1899,
+    "price_sek": 1699,
+    "price_note": "Baserat på $159 USD, omräknat. Säljs via Amazon/chickcozy.com",
     "power": "solar",
-    "wifi": true,
-    "app_control": true,
+    "wifi": false,
+    "app_control": false,
     "anti_pinch": true,
     "min_temp_c": -20,
-    "battery_mah": 3000,
+    "battery_mah": null,
     "material": "Aluminium",
     "door_included": true,
     "door_type": "vertikal",
     "weight_g": 1300,
     "warranty_years": 2,
     "buy_urls": [
-      {"store": "Amazon.se", "url": "#", "affiliate": true}
+      {"store": "Amazon.se", "url": "#", "affiliate": true},
+      {"store": "ChickCozy.com", "url": "#", "affiliate": true}
     ],
-    "pros": ["WiFi + solcell", "Anti-pinch", "Bra prispunkt", "Lucka ingår"],
-    "cons": ["Relativt ny på marknaden", "App kan vara buggig"],
+    "pros": ["Solcellsdriven", "Anti-pinch (dubbelt system)", "Lucka ingår", "Bra pris"],
+    "cons": ["Nytt varumärke", "Begränsad svensk support", "Ingen WiFi/app"],
     "badge": "best-value",
-    "summary": "Bästa pris/prestanda. WiFi och solcell till ett pris som underskrider Omlet med över tusen kronor."
+    "summary": "Prisvärt solcellsalternativ med dubbel anti-pinch. Nyare varumärke men bra recensioner internationellt."
   }
 ]
