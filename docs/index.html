@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hönsgården — Sveriges smartaste guide till hönsutrustning</title>
+  <meta name="description" content="Oberoende jämförelser och guider för höns i trädgården. Automatiska lucköppnare, hönshus och tillbehör — rankade och testade.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hönsgården — Sveriges smartaste guide till hönsutrustning">
+  <meta property="og:description" content="Oberoende jämförelser och guider för höns i trädgården. Automatiska lucköppnare, hönshus och tillbehör — rankade och testade.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐔</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Huvudnavigation">
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">Hönsgården</a>
+      <ul class="nav-links">
+        <li><a href="/luckoppnare.html">Lucköppnare</a></li>
+        <li><a href="/guide/skaffa-hons.html">Guider</a></li>
+        <li><a href="#om">Om oss</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Öppna meny" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div class="nav-overlay" id="navOverlay" role="dialog" aria-label="Mobilmeny">
+    <button class="nav-overlay-close" aria-label="Stäng meny">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <a href="/luckoppnare.html">Lucköppnare</a>
+    <a href="/guide/skaffa-hons.html">Guider</a>
+    <a href="#om">Om oss</a>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero section">
+    <div class="container">
+      <h1 class="animate-in stagger-1">Hönsgården</h1>
+      <p class="hero-subtitle animate-in stagger-2">Sveriges smartaste guide till hönsutrustning</p>
+
+      <!-- Cover Stories -->
+      <div class="cover-grid animate-in stagger-3">
+        <a href="/luckoppnare.html" class="cover-card cover-card--terracotta">
+          <span class="label">Jämförelse</span>
+          <h3>Bästa automatiska lucköppnare 2026</h3>
+          <p>8 modeller jämförda &rarr;</p>
+        </a>
+        <a href="/guide/skaffa-hons.html" class="cover-card cover-card--green">
+          <span class="label">Guide</span>
+          <h3>Allt du behöver veta innan du skaffar höns</h3>
+          <p>Läs guiden &rarr;</p>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Populära jämförelser -->
+  <section class="section">
+    <div class="container">
+      <div class="section-divider animate-in">
+        <span class="label">Populära jämförelser</span>
+      </div>
+
+      <div id="popular-products" class="animate-in stagger-2">
+        <!-- Filled by JS from products.json, works without JS too -->
+        <noscript>
+          <p>Aktivera JavaScript för att se produktjämförelser, eller <a href="/luckoppnare.html">gå direkt till jämförelsetabellen</a>.</p>
+        </noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- Senaste -->
+  <section class="section">
+    <div class="container">
+      <div class="section-divider animate-in">
+        <span class="label">Senaste</span>
+      </div>
+
+      <div class="article-grid animate-in stagger-2">
+        <a href="/luckoppnare.html" class="article-card">
+          <span class="label">Jämförelse</span>
+          <h3>ChickenGuard vs Omlet — vilken lucköppnare är värd pengarna?</h3>
+          <p>Vi ställer marknadens mest populära lucköppnare mot varandra.</p>
+          <span class="article-card-footer">Läs mer &rarr;</span>
+        </a>
+        <a href="/guide/skaffa-hons.html" class="article-card">
+          <span class="label">Guide</span>
+          <h3>Nybörjarguiden: skaffa höns utan att tappa förståndet</h3>
+          <p>Allt från ras till hönshus, steg för steg.</p>
+          <span class="article-card-footer">Läs mer &rarr;</span>
+        </a>
+        <a href="/luckoppnare.html" class="article-card">
+          <span class="label">Tips</span>
+          <h3>Bästa lucköppnaren om du inte vill frysa ihjäl klockan 6</h3>
+          <p>Vilka modeller klarar en riktig svensk vinter?</p>
+          <span class="article-card-footer">Läs mer &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nyhetsbrev -->
+  <section class="section">
+    <div class="container">
+      <div class="newsletter animate-in">
+        <h2>Få veckans bästa hönstips</h2>
+        <p>Nya jämförelser, guider och erbjudanden — direkt i inkorgen.</p>
+        <form class="newsletter-form" action="#" method="POST">
+          <input type="email" placeholder="din@email.se" aria-label="E-postadress" required>
+          <button type="submit" class="btn btn-primary">Prenumerera</button>
+        </form>
+        <p class="newsletter-micro">Inga spam. Bara höns-tips en gång i veckan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="om">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Hönsgården</div>
+          <p>Oberoende jämförelser och guider för svenska hönsägare.</p>
+        </div>
+        <div>
+          <h4>Jämförelser</h4>
+          <ul>
+            <li><a href="/luckoppnare.html">Lucköppnare</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Guider</h4>
+          <ul>
+            <li><a href="/guide/skaffa-hons.html">Skaffa höns</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Om oss</h4>
+          <ul>
+            <li><a href="#om">Om Hönsgården</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Hönsgården</span>
+        <span class="footer-disclaimer">Vi kan få provision via länkar på denna sida.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
