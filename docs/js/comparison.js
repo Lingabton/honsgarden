@@ -52,7 +52,7 @@
 
     // Secondary picks in 2-col grid
     if (otherPicks.length) {
-      html += '<div class="cover-grid" style="margin-top: var(--spacing-md);">';
+      html += '<div class="cover-grid editors-picks-secondary">';
       otherPicks.forEach(function (p) {
         html += renderPickCard(p);
       });
@@ -68,26 +68,26 @@
 
     return '<div class="product-card product-card--featured">' +
       '<span class="award-badge product-card-badge">' + BADGE_LABELS[product.badge] + '</span>' +
-      '<div style="margin-top: var(--spacing-sm);">' +
-        '<div class="score-badge score-badge--' + scoreClass + ' score-badge--large" style="margin: 0 auto var(--spacing-sm);">' + product.score + '</div>' +
-        '<h3 class="product-card-name" style="font-size: 1.4rem;">' + product.name + '</h3>' +
+      '<div class="featured-score-area">' +
+        '<div class="score-badge score-badge--' + scoreClass + ' score-badge--large">' + product.score + '</div>' +
+        '<h3 class="product-card-name">' + product.name + '</h3>' +
         '<div class="product-card-meta">' + product.brand + '</div>' +
-        '<div class="product-card-specs" style="justify-content: center; margin-top: var(--spacing-sm);">' +
+        '<div class="product-card-specs">' +
           specs.map(function (s) { return '<span class="tag">' + s + '</span>'; }).join('') +
         '</div>' +
-        '<div class="product-card-price" style="font-size: 1.5rem; margin-top: var(--spacing-sm);">' + formatPrice(product.price_sek) + '</div>' +
-        '<p style="margin: var(--spacing-sm) auto 0; max-width: 500px; font-size: 0.9rem; color: var(--text-secondary);">' + product.summary + '</p>' +
+        '<div class="product-card-price">' + formatPrice(product.price_sek) + '</div>' +
+        '<p class="featured-summary">' + product.summary + '</p>' +
       '</div>' +
     '</div>';
   }
 
   function renderPickCard(product) {
     var scoreClass = getScoreClass(product.score);
-    return '<div class="product-card" style="flex-direction: column; text-align: center; padding: var(--spacing-md);">' +
-      '<span class="award-badge" style="align-self: center;">' + BADGE_LABELS[product.badge] + '</span>' +
-      '<div class="score-badge score-badge--' + scoreClass + '" style="margin: var(--spacing-sm) auto;">' + product.score + '</div>' +
+    return '<div class="product-card pick-card">' +
+      '<span class="award-badge">' + BADGE_LABELS[product.badge] + '</span>' +
+      '<div class="score-badge score-badge--' + scoreClass + '">' + product.score + '</div>' +
       '<div class="product-card-name">' + product.name + '</div>' +
-      '<div class="product-card-price" style="margin-top: 0.25rem;">' + formatPrice(product.price_sek) + '</div>' +
+      '<div class="product-card-price">' + formatPrice(product.price_sek) + '</div>' +
     '</div>';
   }
 

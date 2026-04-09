@@ -22,8 +22,30 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Hönsgården",
+    "url": "https://lingabton.github.io/honsgarden/",
+    "description": "Oberoende jämförelser och guider för höns i trädgården.",
+    "inLanguage": "sv"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hönsgården", "item": "https://lingabton.github.io/honsgarden/" }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Hoppa till innehållet</a>
 
   <!-- Navigation -->
   <nav class="nav" role="navigation" aria-label="Huvudnavigation">
@@ -34,7 +56,7 @@
         <li><a href="/guide/skaffa-hons.html">Guider</a></li>
         <li><a href="#om">Om oss</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Öppna meny" aria-expanded="false">
+      <button type="button" class="nav-toggle" aria-label="Öppna meny" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <line x1="3" y1="6" x2="21" y2="6"/>
           <line x1="3" y1="12" x2="21" y2="12"/>
@@ -46,7 +68,7 @@
 
   <!-- Mobile overlay -->
   <div class="nav-overlay" id="navOverlay" role="dialog" aria-label="Mobilmeny">
-    <button class="nav-overlay-close" aria-label="Stäng meny">
+    <button type="button" class="nav-overlay-close" aria-label="Stäng meny">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
         <line x1="18" y1="6" x2="6" y2="18"/>
         <line x1="6" y1="6" x2="18" y2="18"/>
@@ -58,13 +80,30 @@
   </div>
 
   <!-- Hero -->
-  <header class="hero section">
+  <header class="hero section" id="main-content">
     <div class="container">
-      <h1 class="animate-in stagger-1">Hönsgården</h1>
-      <p class="hero-subtitle animate-in stagger-2">Sveriges smartaste guide till hönsutrustning</p>
+      <div class="animate-in stagger-1" style="margin-bottom: var(--spacing-sm);">
+        <svg class="illustration-hen" width="80" height="67" viewBox="0 0 120 100" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <ellipse cx="55" cy="60" rx="35" ry="25"/>
+          <circle cx="88" cy="38" r="12"/>
+          <circle cx="92" cy="36" r="2" fill="currentColor" stroke="none"/>
+          <path d="M100 38 L110 36 L100 40"/>
+          <path d="M82 27 C84 20 88 22 86 27 C88 20 92 22 90 27"/>
+          <path d="M22 50 C10 30 18 25 25 40"/>
+          <path d="M20 52 C6 38 14 30 22 45"/>
+          <path d="M24 48 C14 25 22 20 28 38"/>
+          <line x1="48" y1="82" x2="45" y2="96"/>
+          <line x1="62" y1="82" x2="65" y2="96"/>
+          <path d="M38 96 L45 96 L50 96"/>
+          <path d="M58 96 L65 96 L70 96"/>
+          <path d="M40 50 C50 45 65 48 60 60"/>
+        </svg>
+      </div>
+      <h1 class="animate-in stagger-2">Hönsgården</h1>
+      <p class="hero-subtitle animate-in stagger-3">Sveriges smartaste guide till hönsutrustning</p>
 
       <!-- Cover Stories -->
-      <div class="cover-grid animate-in stagger-3">
+      <div class="cover-grid animate-in stagger-4">
         <a href="/luckoppnare.html" class="cover-card cover-card--terracotta">
           <span class="label">Jämförelse</span>
           <h3>Bästa automatiska lucköppnare 2026</h3>

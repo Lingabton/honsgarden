@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Body -->
+  <ellipse cx="55" cy="60" rx="35" ry="25" />
+  <!-- Head -->
+  <circle cx="88" cy="38" r="12" />
+  <!-- Eye -->
+  <circle cx="92" cy="36" r="2" fill="currentColor" stroke="none" />
+  <!-- Beak -->
+  <path d="M100 38 L110 36 L100 40" />
+  <!-- Comb -->
+  <path d="M82 27 C84 20 88 22 86 27 C88 20 92 22 90 27" />
+  <!-- Wattle -->
+  <path d="M96 42 C98 48 94 48 96 42" fill="currentColor" stroke="none" opacity="0.5" />
+  <!-- Tail feathers -->
+  <path d="M22 50 C10 30 18 25 25 40" />
+  <path d="M20 52 C6 38 14 30 22 45" />
+  <path d="M24 48 C14 25 22 20 28 38" />
+  <!-- Legs -->
+  <line x1="48" y1="82" x2="45" y2="96" />
+  <line x1="62" y1="82" x2="65" y2="96" />
+  <!-- Feet -->
+  <path d="M38 96 L45 96 L50 96" />
+  <path d="M58 96 L65 96 L70 96" />
+  <!-- Wing detail -->
+  <path d="M40 50 C50 45 65 48 60 60" />
+</svg>

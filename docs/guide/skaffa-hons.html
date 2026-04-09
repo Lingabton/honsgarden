@@ -50,6 +50,7 @@
   </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Hoppa till innehållet</a>
 
   <!-- Navigation -->
   <nav class="nav" role="navigation" aria-label="Huvudnavigation">
@@ -60,7 +61,7 @@
         <li><a href="/guide/skaffa-hons.html" class="active">Guider</a></li>
         <li><a href="/#om">Om oss</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Öppna meny" aria-expanded="false">
+      <button type="button" class="nav-toggle" aria-label="Öppna meny" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <line x1="3" y1="6" x2="21" y2="6"/>
           <line x1="3" y1="12" x2="21" y2="12"/>
@@ -72,7 +73,7 @@
 
   <!-- Mobile overlay -->
   <div class="nav-overlay" id="navOverlay" role="dialog" aria-label="Mobilmeny">
-    <button class="nav-overlay-close" aria-label="Stäng meny">
+    <button type="button" class="nav-overlay-close" aria-label="Stäng meny">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
         <line x1="18" y1="6" x2="6" y2="18"/>
         <line x1="6" y1="6" x2="18" y2="18"/>
@@ -85,11 +86,11 @@
   </div>
 
   <!-- Article header -->
-  <header class="section" style="padding-bottom: 0;">
+  <header class="section page-header" id="main-content">
     <div class="container">
       <div class="article-content">
         <p class="label animate-in stagger-1">Guide</p>
-        <h1 class="animate-in stagger-2" style="font-size: clamp(1.8rem, 4vw, 2.8rem);">Allt du behöver veta innan du skaffar höns</h1>
+        <h1 class="animate-in stagger-2">Allt du behöver veta innan du skaffar höns</h1>
         <div class="article-meta animate-in stagger-3">
           <span>Uppdaterad 9 april 2026</span>
           <span>·</span>
@@ -131,7 +132,7 @@
         <h2 id="regler" class="animate-in">Regler och tillstånd</h2>
         <p class="animate-in">I Sverige behöver du inget tillstånd för att ha höns i din trädgård, förutsatt att du bor utanför detaljplanerat område. Bor du inom detaljplan (de flesta villaområden) behöver du kolla med din kommun. Många kommuner tillåter 5–10 hönor utan problem.</p>
         <p class="animate-in"><strong>Du måste alltid:</strong></p>
-        <ul class="animate-in" style="padding-left: 1.5rem; margin-bottom: var(--spacing-md); color: var(--text-secondary); line-height: 1.8;">
+        <ul class="animate-in" class="guide-list">
           <li>Registrera dig som djurhållare hos Jordbruksverket</li>
           <li>Ha ett godkänt hönshus med minst 0.1 m² per höna inomhus</li>
           <li>Följa Jordbruksverkets regler om stallplikt vid fågelinfluensa</li>
@@ -160,23 +161,23 @@
         <p class="animate-in">Tänk på att du behöver en lucka som helst öppnas och stängs automatiskt. Du vill inte stå ute klockan sex varje morgon — speciellt inte i november. En automatisk lucköppnare är en av de bästa investeringarna du kan göra.</p>
 
         <!-- Inline product recommendation -->
-        <div class="product-card animate-in" style="margin: var(--spacing-lg) 0;">
+        <div class="product-card inline-recommendation animate-in">
           <div class="score-badge score-badge--excellent">8.5</div>
           <div class="product-card-info">
             <div class="product-card-name">Vår rekommendation: ChickenGuard All-in-One Solar</div>
             <div class="product-card-meta">Pålitlig solcellsdriven öppnare med anti-pinch och tre års garanti.</div>
-            <div class="product-card-specs" style="margin-top: 0.5rem;">
+            <div class="product-card-specs mt-sm">
               <span class="tag tag--positive">Solar</span>
               <span class="tag tag--positive">Anti-pinch</span>
               <span class="tag">3 års garanti</span>
             </div>
           </div>
-          <a href="/luckoppnare.html" class="btn btn-secondary" style="white-space: nowrap;">Se alla lucköppnare</a>
+          <a href="/luckoppnare.html" class="btn btn-secondary">Se alla lucköppnare</a>
         </div>
 
         <h2 id="utrustning" class="animate-in">Utrustning du behöver</h2>
         <p class="animate-in">Förutom hönshuset behöver du:</p>
-        <ul class="animate-in" style="padding-left: 1.5rem; margin-bottom: var(--spacing-md); color: var(--text-secondary); line-height: 1.8;">
+        <ul class="animate-in" class="guide-list">
           <li><strong>Foderautomater</strong> — minskar spill och hindrar skadedjur</li>
           <li><strong>Vattenautomat</strong> — frostfri variant om du bor norr om Mälaren</li>
           <li><strong>Värmelampa eller värmeplatta</strong> — för extremt kalla nätter</li>
@@ -190,7 +191,7 @@
 
         <h2 id="vardag" class="animate-in">Vardagen med höns</h2>
         <p class="animate-in">Den dagliga rutinen tar 5–10 minuter:</p>
-        <ul class="animate-in" style="padding-left: 1.5rem; margin-bottom: var(--spacing-md); color: var(--text-secondary); line-height: 1.8;">
+        <ul class="animate-in" class="guide-list">
           <li>Morgon: öppna luckan (automatiskt!), kolla foder och vatten</li>
           <li>Samla ägg — gärna tidigt, innan hönorna börjar hacka på dem</li>
           <li>Kväll: kontrollera att alla höns gått in, stäng luckan</li>
@@ -206,7 +207,7 @@
           Den vanligaste nybörjarmisstaget på vintern? Att stänga alla ventilationsöppningar. Höns behöver frisk luft — stäng drag, inte ventilation.
         </div>
 
-        <p class="animate-in" style="margin-top: var(--spacing-xl);">
+        <p class="animate-in mt-lg">
           <strong>Redo att komma igång?</strong> Kolla vår <a href="/luckoppnare.html">jämförelse av automatiska lucköppnare</a> — det är det smartaste köpet du gör som nybörjare.
         </p>
 

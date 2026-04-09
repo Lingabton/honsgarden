@@ -82,7 +82,7 @@
           return renderProductCard(p);
         }).join('');
 
-        container.innerHTML = '<div style="display:flex;flex-direction:column;gap:1rem;">' + html + '</div>';
+        container.innerHTML = '<div class="product-list">' + html + '</div>';
       })
       .catch(function () {
         // Graceful degradation — products already linked in cover cards
@@ -226,6 +226,59 @@
     });
   }
 
+  // --- Smooth scroll for anchor links ---
+  function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Update URL without jump
+          history.pushState(null, '', this.getAttribute('href'));
+        }
+      });
+    });
+  }
+
+  // --- Newsletter form (placeholder) ---
+  function initNewsletter() {
+    var form = document.querySelector('.newsletter-form');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var input = form.querySelector('input[type="email"]');
+      var btn = form.querySelector('button');
+      if (!input || !btn) return;
+
+      // Simple feedback — replace with real integration later
+      var email = input.value;
+      btn.textContent = 'Tack!';
+      btn.disabled = true;
+      input.disabled = true;
+      input.value = '';
+
+      // Reset after 3s
+      setTimeout(function () {
+        btn.textContent = 'Prenumerera';
+        btn.disabled = false;
+        input.disabled = false;
+      }, 3000);
+    });
+  }
+
+  // --- Active nav link ---
+  function initActiveNav() {
+    var path = window.location.pathname;
+    document.querySelectorAll('.nav-links a').forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (href && path.endsWith(href)) {
+        link.classList.add('active');
+      }
+    });
+  }
+
   // --- Init ---
   document.addEventListener('DOMContentLoaded', function () {
     initAnimations();
@@ -233,6 +286,9 @@
     initPopularProducts();
     initTableSort();
     initTableFilters();
+    initSmoothScroll();
+    initNewsletter();
+    initActiveNav();
   });
 
 })();
