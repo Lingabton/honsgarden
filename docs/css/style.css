@@ -1203,7 +1203,7 @@ select:focus-visible {
   line-height: 1.8;
 }
 
-/* --- Product image placeholders (editorial blocks) --- */
+/* --- Product images --- */
 .product-image {
   position: relative;
   width: 100%;
@@ -1214,6 +1214,15 @@ select:focus-visible {
   align-items: center;
   justify-content: center;
   margin-bottom: var(--spacing-sm);
+  background: var(--bg-secondary);
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 12px;
 }
 
 .product-image--terracotta { background: linear-gradient(135deg, #C4653A 0%, #a8522e 100%); }
