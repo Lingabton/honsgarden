@@ -1,4 +1,15 @@
 User-agent: *
 Allow: /
+Disallow: /404.html
+
+# AI crawlers - allow for training (optional, remove if you don't want this)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
 
 Sitemap: https://lingabton.github.io/honsgarden/sitemap.xml
