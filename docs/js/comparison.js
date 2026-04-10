@@ -15,16 +15,23 @@
   };
 
   function init() {
-    fetch('data/products.json')
-      .then(function (res) { return res.json(); })
-      .then(function (products) {
-        renderEditorsPicks(products);
-        renderTable(products);
-        highlightBestInColumn();
-      })
-      .catch(function (err) {
-        console.error('Failed to load products:', err);
-      });
+    // Prerendered HTML exists — just enhance with best-in-column highlights
+    highlightBestInColumn();
+
+    // Only fetch JSON if tables are empty (fallback, shouldn't happen in prod)
+    var tbody = document.getElementById('table-body');
+    if (tbody && tbody.children.length === 0) {
+      fetch('data/products.json')
+        .then(function (res) { return res.json(); })
+        .then(function (products) {
+          renderEditorsPicks(products);
+          renderTable(products);
+          highlightBestInColumn();
+        })
+        .catch(function (err) {
+          console.error('Failed to load products:', err);
+        });
+    }
   }
 
   // --- Editor's Picks ---

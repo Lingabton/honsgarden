@@ -64,29 +64,10 @@
     });
   }
 
-  // --- Load popular products on homepage ---
+  // --- Load popular products on homepage (no-op now, content is pre-rendered) ---
   function initPopularProducts() {
-    var container = document.getElementById('popular-products');
-    if (!container) return;
-
-    fetch('data/products.json')
-      .then(function (res) { return res.json(); })
-      .then(function (products) {
-        // Show top 3 by score
-        var top = products
-          .slice()
-          .sort(function (a, b) { return b.score - a.score; })
-          .slice(0, 3);
-
-        var html = top.map(function (p) {
-          return renderProductCard(p);
-        }).join('');
-
-        container.innerHTML = '<div class="product-list">' + html + '</div>';
-      })
-      .catch(function () {
-        // Graceful degradation — products already linked in cover cards
-      });
+    // Pre-rendered in HTML. This function is kept for backwards compat only.
+    return;
   }
 
   function renderProductCard(product) {

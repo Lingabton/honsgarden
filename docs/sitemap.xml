@@ -7,7 +7,7 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://lingabton.github.io/honsgarden/img/photos/red-hens-coop.jpg</image:loc>
+      <image:loc>https://lingabton.github.io/honsgarden/img/photos/red-hens-coop.webp</image:loc>
       <image:title>Höns utanför hönshus</image:title>
     </image:image>
   </url>
@@ -17,7 +17,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://lingabton.github.io/honsgarden/img/photos/coop-unsplash.jpg</image:loc>
+      <image:loc>https://lingabton.github.io/honsgarden/img/photos/coop-unsplash.webp</image:loc>
       <image:title>Hönshus med automatisk lucköppnare</image:title>
     </image:image>
   </url>
@@ -27,8 +27,38 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://lingabton.github.io/honsgarden/img/photos/red-hens-coop.jpg</image:loc>
+      <image:loc>https://lingabton.github.io/honsgarden/img/photos/red-hens-coop.webp</image:loc>
       <image:title>Skaffa höns nybörjarguide</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lingabton.github.io/honsgarden/guide/hons-pa-vintern.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://lingabton.github.io/honsgarden/img/photos/coop-unsplash.webp</image:loc>
+      <image:title>Höns på vintern</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lingabton.github.io/honsgarden/guide/skydda-hons-mot-rav.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://lingabton.github.io/honsgarden/img/photos/red-hens-coop.webp</image:loc>
+      <image:title>Skydda höns mot räv</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lingabton.github.io/honsgarden/guide/vad-kostar-hons.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://lingabton.github.io/honsgarden/img/photos/happy-hens.webp</image:loc>
+      <image:title>Vad kostar det att ha höns</image:title>
     </image:image>
   </url>
 </urlset>

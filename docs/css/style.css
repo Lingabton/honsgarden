@@ -493,6 +493,18 @@ p {
   font-size: 1.3rem;
 }
 
+.score-badge--sm {
+  width: 36px;
+  height: 36px;
+  font-size: 0.85rem;
+}
+
+.award-badge--small {
+  font-size: 0.65rem;
+  padding: 0.2rem 0.5rem;
+  margin-left: 0.4rem;
+}
+
 /* --- Tags / Spec badges --- */
 .tag {
   display: inline-flex;
@@ -1189,6 +1201,37 @@ select:focus-visible {
   margin-bottom: var(--spacing-md);
   color: var(--text-secondary);
   line-height: 1.8;
+}
+
+/* --- Simple table (inline content tables) --- */
+.simple-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-md) 0;
+  font-size: 0.9rem;
+}
+
+.simple-table th {
+  background: var(--bg-secondary);
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--border-strong);
+}
+
+.simple-table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.simple-table tbody tr:last-child td {
+  border-bottom: none;
+  background: var(--bg-secondary);
 }
 
 /* --- Affiliate disclosure --- */
