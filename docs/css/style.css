@@ -1191,6 +1191,110 @@ select:focus-visible {
   line-height: 1.8;
 }
 
+/* --- Breadcrumb --- */
+.breadcrumb {
+  margin-bottom: var(--spacing-sm);
+}
+
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0;
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.breadcrumb li + li::before {
+  content: '/';
+  color: var(--border-strong);
+}
+
+.breadcrumb a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--accent-primary);
+  text-decoration: underline;
+}
+
+.breadcrumb [aria-current="page"] {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* --- Article intro --- */
+.article-intro {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 720px;
+  margin-top: var(--spacing-md);
+  font-style: italic;
+}
+
+/* --- FAQ accordion --- */
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: var(--spacing-sm) 0;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.faq-item summary {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.5rem 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--accent-primary);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+  content: '−';
+}
+
+.faq-item summary:hover {
+  color: var(--accent-primary);
+}
+
+.faq-item p {
+  padding: 0.5rem 0 0.5rem 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 680px;
+}
+
 /* --- Editorial image blocks --- */
 .editorial-image {
   margin: var(--spacing-xl) 0;
