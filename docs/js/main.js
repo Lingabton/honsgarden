@@ -107,7 +107,7 @@
       return '<span class="tag">' + s + '</span>';
     }).join('');
 
-    return '<a href="/luckoppnare.html" class="product-card">' +
+    return '<a href="luckoppnare.html" class="product-card">' +
       '<div class="score-badge score-badge--' + scoreClass + '">' + product.score + '</div>' +
       '<div class="product-card-info">' +
         '<div class="product-card-name">' + badgeHtml + product.name + '</div>' +
