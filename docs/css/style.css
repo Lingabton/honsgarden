@@ -1191,6 +1191,54 @@ select:focus-visible {
   line-height: 1.8;
 }
 
+/* --- Affiliate disclosure --- */
+.affiliate-disclosure {
+  background: var(--bg-secondary);
+  border-left: 3px solid var(--accent-primary);
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-top: var(--spacing-md);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  max-width: 720px;
+}
+
+.affiliate-disclosure strong {
+  color: var(--text-primary);
+}
+
+/* --- Buy buttons --- */
+.buy-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: var(--spacing-md);
+}
+
+.btn-buy {
+  padding: 0.55rem 1rem;
+  font-size: 0.85rem;
+  min-height: 40px;
+}
+
+.btn-network {
+  opacity: 0.7;
+  font-size: 0.7rem;
+  font-weight: 400;
+  margin-left: 0.25rem;
+}
+
+@media (max-width: 600px) {
+  .buy-buttons {
+    flex-direction: column;
+  }
+  .btn-buy {
+    width: 100%;
+  }
+}
+
 /* --- Breadcrumb --- */
 .breadcrumb {
   margin-bottom: var(--spacing-sm);

@@ -18,7 +18,20 @@
     "weight_g": 800,
     "warranty_years": 3,
     "buy_urls": [
-      {"store": "ChickenGuard.com", "url": "#", "affiliate": true}
+      {
+        "store": "Amazon.se",
+        "url": "https://www.amazon.se/s?k=chickenguard+all-in-one+solar&tag=honsgarden-21",
+        "affiliate": true,
+        "network": "amazon",
+        "placeholder": true
+      },
+      {
+        "store": "ChickenGuard EU",
+        "url": "https://chickenguard.eu/product/all-in-one-solar/",
+        "affiliate": false,
+        "network": null,
+        "placeholder": false
+      }
     ],
     "pros": ["Hållbart material", "Solcell", "3 års garanti"],
     "cons": ["Lucka säljs separat", "Ingen WiFi", "Svår att köpa i Sverige"],
@@ -44,7 +57,27 @@
     "weight_g": 600,
     "warranty_years": 3,
     "buy_urls": [
-      {"store": "Djursajten", "url": "#", "affiliate": true}
+      {
+        "store": "Granngården",
+        "url": "ADTRACTION_PLACEHOLDER_granngarden_chickenguard_premium",
+        "affiliate": true,
+        "network": "adtraction",
+        "placeholder": true
+      },
+      {
+        "store": "Bole.se",
+        "url": "https://www.bole.se/automatisk-luckoppnare-chicken-guard-pro-og-dorrkit",
+        "affiliate": false,
+        "network": null,
+        "placeholder": false
+      },
+      {
+        "store": "Amazon.se",
+        "url": "https://www.amazon.se/s?k=chickenguard+premium&tag=honsgarden-21",
+        "affiliate": true,
+        "network": "amazon",
+        "placeholder": true
+      }
     ],
     "pros": ["Återvunnet material", "Anti-pinch", "3 års garanti", "Tillgänglig i Sverige"],
     "cons": ["Lucka säljs separat", "Ingen WiFi", "Batteridrift"],
@@ -70,8 +103,27 @@
     "weight_g": 1200,
     "warranty_years": 2,
     "buy_urls": [
-      {"store": "Granngården", "url": "#", "affiliate": true},
-      {"store": "Hylte Jakt & Lantman", "url": "#", "affiliate": true}
+      {
+        "store": "Granngården",
+        "url": "ADTRACTION_PLACEHOLDER_granngarden_kerbl_komplett",
+        "affiliate": true,
+        "network": "adtraction",
+        "placeholder": true
+      },
+      {
+        "store": "Hylte Jakt & Lantman",
+        "url": "https://www.hylte-lantman.com/kerbl-honslucka-automatisk-komplett-300x400mm",
+        "affiliate": false,
+        "network": null,
+        "placeholder": false
+      },
+      {
+        "store": "Bonden.se",
+        "url": "ADTRACTION_PLACEHOLDER_bonden_kerbl_komplett",
+        "affiliate": true,
+        "network": "adtraction",
+        "placeholder": true
+      }
     ],
     "pros": ["Komplett med lucka", "Bred tillgänglighet i Sverige", "Timer + ljussensor"],
     "cons": ["Ingen anti-pinch", "Klarar bara -10°C", "Ingen WiFi"],
@@ -97,7 +149,13 @@
     "weight_g": 1500,
     "warranty_years": 2,
     "buy_urls": [
-      {"store": "Omlet.se", "url": "#", "affiliate": true}
+      {
+        "store": "Omlet.se",
+        "url": "AWIN_PLACEHOLDER_omlet_autodoor",
+        "affiliate": true,
+        "network": "awin",
+        "placeholder": true
+      }
     ],
     "pros": ["WiFi + app-styrning", "Premium-känsla", "Lucka ingår", "Anti-pinch"],
     "cons": ["Dyrt", "Bara -15°C", "Passar främst Omlet-hönshus"],
@@ -123,7 +181,20 @@
     "weight_g": 900,
     "warranty_years": 1,
     "buy_urls": [
-      {"store": "Amazon.se", "url": "#", "affiliate": true}
+      {
+        "store": "Amazon.se",
+        "url": "https://www.amazon.se/s?k=run+chicken+t50&tag=honsgarden-21",
+        "affiliate": true,
+        "network": "amazon",
+        "placeholder": true
+      },
+      {
+        "store": "Run-Chicken EU",
+        "url": "https://run-chicken.eu/product/t50-brown/",
+        "affiliate": false,
+        "network": null,
+        "placeholder": false
+      }
     ],
     "pros": ["Bluetooth app-styrning", "Lucka ingår", "Aluminium", "Anti-pinch"],
     "cons": ["Kort garanti", "Batteridrift (AA)", "Begränsad svensk support"],
@@ -149,7 +220,20 @@
     "weight_g": 500,
     "warranty_years": 2,
     "buy_urls": [
-      {"store": "Amazon.se", "url": "#", "affiliate": true}
+      {
+        "store": "Amazon.se",
+        "url": "https://www.amazon.se/s?k=brinsea+chicksafe&tag=honsgarden-21",
+        "affiliate": true,
+        "network": "amazon",
+        "placeholder": true
+      },
+      {
+        "store": "Hönshuset",
+        "url": "https://www.honshuset.se/produkt/brinsea-chicksafe-advance-automatisk-luckoppnare/",
+        "affiliate": false,
+        "network": null,
+        "placeholder": false
+      }
     ],
     "pros": ["Lätt", "Enkel programmering", "Pålitligt varumärke (kläckmaskiner)"],
     "cons": ["Ingen anti-pinch", "Lucka säljs separat", "Svår att hitta i Sverige"],
@@ -175,7 +259,13 @@
     "weight_g": 1100,
     "warranty_years": 1,
     "buy_urls": [
-      {"store": "VEVOR.com", "url": "#", "affiliate": true}
+      {
+        "store": "Amazon.se",
+        "url": "https://www.amazon.se/s?k=vevor+automatisk+honslucka&tag=honsgarden-21",
+        "affiliate": true,
+        "network": "amazon",
+        "placeholder": true
+      }
     ],
     "pros": ["Billigast av alla", "Lucka ingår", "Aluminium"],
     "cons": ["Dålig vinterprestanda", "Kort garanti", "Tveksam hållbarhet"],
@@ -201,8 +291,20 @@
     "weight_g": 1300,
     "warranty_years": 2,
     "buy_urls": [
-      {"store": "Amazon.se", "url": "#", "affiliate": true},
-      {"store": "ChickCozy.com", "url": "#", "affiliate": true}
+      {
+        "store": "Amazon.se",
+        "url": "https://www.amazon.se/s?k=chickcozy+solar&tag=honsgarden-21",
+        "affiliate": true,
+        "network": "amazon",
+        "placeholder": true
+      },
+      {
+        "store": "ChickCozy.com",
+        "url": "https://chickcozy.com/products/sloar-automatic-chicken-coop-door",
+        "affiliate": false,
+        "network": null,
+        "placeholder": false
+      }
     ],
     "pros": ["Solcellsdriven", "Anti-pinch (dubbelt system)", "Lucka ingår", "Bra pris"],
     "cons": ["Nytt varumärke", "Begränsad svensk support", "Ingen WiFi/app"],

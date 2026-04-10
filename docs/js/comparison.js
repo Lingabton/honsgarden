@@ -77,6 +77,7 @@
         '</div>' +
         '<div class="product-card-price">' + formatPrice(product.price_sek) + '</div>' +
         '<p class="featured-summary">' + product.summary + '</p>' +
+        renderBuyButtons(product) +
       '</div>' +
     '</div>';
   }
@@ -89,6 +90,30 @@
       '<div class="product-card-name">' + product.name + '</div>' +
       '<div class="product-card-price">' + formatPrice(product.price_sek) + '</div>' +
     '</div>';
+  }
+
+  // --- Buy buttons with proper rel attributes ---
+  function renderBuyButtons(product) {
+    if (!product.buy_urls || !product.buy_urls.length) return '';
+
+    var buttons = product.buy_urls.map(function (link) {
+      var rel = link.affiliate
+        ? 'sponsored nofollow noopener noreferrer'
+        : 'noopener noreferrer';
+      var cls = link.affiliate ? 'btn btn-primary btn-buy' : 'btn btn-secondary btn-buy';
+      var label = link.affiliate
+        ? 'Köp hos ' + link.store
+        : 'Se hos ' + link.store;
+      var networkTag = link.affiliate && link.network
+        ? ' <small class="btn-network">(' + link.network + ')</small>'
+        : '';
+
+      return '<a href="' + link.url + '" class="' + cls + '" rel="' + rel + '" target="_blank">' +
+        label + networkTag +
+      '</a>';
+    }).join('');
+
+    return '<div class="buy-buttons">' + buttons + '</div>';
   }
 
   // --- Table ---
