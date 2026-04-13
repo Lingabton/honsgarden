@@ -5,20 +5,20 @@
 
 /* --- Design Tokens --- */
 :root {
-  /* Bas — rent vitt, inte AI-beige */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f6f5f3;
+  /* Bas — vitt med en aning värme */
+  --bg-primary: #fefefe;
+  --bg-secondary: #f5f3ef;
   --bg-card: #ffffff;
 
-  /* Text — ren kontrast */
-  --text-primary: #1a1a1a;
+  /* Text */
+  --text-primary: #222;
   --text-secondary: #555;
   --text-tertiary: #888;
 
-  /* Accent — EN färg, inte tre */
-  --accent-primary: #c2522a;
-  --accent-secondary: #c2522a;
-  --accent-highlight: #c2522a;
+  /* Accent — terracotta + en lugn grön för variation */
+  --accent-primary: #b5482a;
+  --accent-secondary: #4a6741;
+  --accent-highlight: #b5482a;
 
   /* Functional */
   --border: #e5e5e5;
@@ -325,11 +325,18 @@ p {
   box-shadow: var(--shadow-card);
 }
 
-.cover-card--terracotta,
-.cover-card--green {
-  background: var(--bg-primary);
+.cover-card--terracotta {
+  background: var(--bg-secondary);
   color: var(--text-primary);
-  border: 1.5px solid var(--border);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-primary);
+}
+
+.cover-card--green {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-secondary);
 }
 
 .cover-card .label {
@@ -415,7 +422,7 @@ p {
   border-left: 3px solid var(--accent-primary);
   border-radius: 0;
   position: relative;
-  background: var(--bg-card);
+  background: var(--bg-secondary);
 }
 
 .product-card--featured .product-card-badge {
