@@ -12,4 +12,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://lingabton.github.io/honsgarden/sitemap.xml
+Sitemap: https://honsguiden.se/sitemap.xml

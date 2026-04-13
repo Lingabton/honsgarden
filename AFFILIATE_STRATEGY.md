@@ -1,4 +1,4 @@
-# Hönsgården — Affiliate-strategi
+# Hönsguiden — Affiliate-strategi
 
 Privat dokument. Ligger i repo-roten men publiceras inte på sajten.
 
@@ -20,7 +20,7 @@ Dessa tre täcker ~90% av produkterna du jämför.
 **Grundat:** 2007, Stockholm
 **Typ:** Nordens största affiliate-nätverk
 
-### Relevanta annonsörer för Hönsgården
+### Relevanta annonsörer för Hönsguiden
 | Merchant | Kategori | Sannolikt intressant för |
 |----------|----------|--------------------------|
 | **Granngården** | Lantbruk/djur | ChickenGuard, hönshus, foder, allt |
@@ -136,7 +136,7 @@ https://www.omlet.us/misc/become-an-affiliate
 
 ---
 
-## Praktisk implementation på Hönsgården
+## Praktisk implementation på Hönsguiden
 
 ### Steg 1: Skapa konton (i denna ordning)
 1. **Adtraction** — primärt nätverk
@@ -170,7 +170,7 @@ Uppdatera `buy_urls` i `docs/data/products.json` från platshållare till riktig
 
 ```html
 <p class="affiliate-disclosure">
-  <small>Hönsgården är läsarfinansierat. När du köper via länkar på vår sida kan vi få provision utan extra kostnad för dig. Det påverkar aldrig våra rekommendationer.</small>
+  <small>Hönsguiden är läsarfinansierat. När du köper via länkar på vår sida kan vi få provision utan extra kostnad för dig. Det påverkar aldrig våra rekommendationer.</small>
 </p>
 ```
 

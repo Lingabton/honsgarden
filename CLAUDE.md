@@ -219,7 +219,7 @@ Två varianter:
 - Connects to (placeholder) — vi kopplar Substack/Mailchimp senare
 
 ### 6. Footer
-- Minimal. "Hönsgården drivs av Olav Innovation AB"
+- Minimal. "Hönsguiden drivs av Olav Innovation AB"
 - Kolumner: Jämförelser, Guider, Om oss
 - Disclaimer: "Vi kan få provision via länkar på denna sida"
 
@@ -319,13 +319,13 @@ honsgarden/
 
 ### Meta för startsidan
 ```html
-<title>Hönsgården — Sveriges smartaste guide till hönsutrustning</title>
+<title>Hönsguiden — Sveriges smartaste guide till hönsutrustning</title>
 <meta name="description" content="Oberoende jämförelser och guider för höns i trädgården. Automatiska lucköppnare, hönshus och tillbehör — rankade och testade.">
 ```
 
 ### Meta för jämförelsesidan
 ```html
-<title>Bästa automatiska lucköppnare för höns 2026 — Hönsgården</title>
+<title>Bästa automatiska lucköppnare för höns 2026 — Hönsguiden</title>
 <meta name="description" content="Vi jämför 8 automatiska lucköppnare för hönshus. ChickenGuard, Kerbl, Omlet och fler — rankade på pris, prestanda och säkerhet.">
 ```
 
@@ -341,7 +341,7 @@ honsgarden/
 
 ### Röst: Kunnig granne, inte expert-auktoritet
 - Skriv som en vän som har haft höns i 5 år och gärna delar med sig
-- Undvik: "vi på Hönsgården anser..." — skriv istället "den här lucköppnaren klarar svenska vintrar bättre än..."
+- Undvik: "vi på Hönsguiden anser..." — skriv istället "den här lucköppnaren klarar svenska vintrar bättre än..."
 - Tillåtet att vara lite personlig: "Vi har testat den i -15° i Örebro och den funkar felfritt"
 - Aldrig: marknadsförings-jargong, "revolutionerande", "game-changer"
 
