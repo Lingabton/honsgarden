@@ -20,7 +20,7 @@
     "buy_urls": [
       {
         "store": "Amazon.se",
-        "url": "https://www.amazon.se/s?k=chickenguard+all-in-one+solar&tag=honsgarden-21",
+        "url": "https://www.amazon.se/s?k=chickenguard+all-in-one+solar&tag=honsguiden-21",
         "affiliate": true,
         "network": "amazon",
         "placeholder": true
@@ -73,7 +73,7 @@
       },
       {
         "store": "Amazon.se",
-        "url": "https://www.amazon.se/s?k=chickenguard+premium&tag=honsgarden-21",
+        "url": "https://www.amazon.se/s?k=chickenguard+premium&tag=honsguiden-21",
         "affiliate": true,
         "network": "amazon",
         "placeholder": true
@@ -183,7 +183,7 @@
     "buy_urls": [
       {
         "store": "Amazon.se",
-        "url": "https://www.amazon.se/s?k=run+chicken+t50&tag=honsgarden-21",
+        "url": "https://www.amazon.se/s?k=run+chicken+t50&tag=honsguiden-21",
         "affiliate": true,
         "network": "amazon",
         "placeholder": true
@@ -222,7 +222,7 @@
     "buy_urls": [
       {
         "store": "Amazon.se",
-        "url": "https://www.amazon.se/s?k=brinsea+chicksafe&tag=honsgarden-21",
+        "url": "https://www.amazon.se/s?k=brinsea+chicksafe&tag=honsguiden-21",
         "affiliate": true,
         "network": "amazon",
         "placeholder": true
@@ -261,7 +261,7 @@
     "buy_urls": [
       {
         "store": "Amazon.se",
-        "url": "https://www.amazon.se/s?k=vevor+automatisk+honslucka&tag=honsgarden-21",
+        "url": "https://www.amazon.se/s?k=vevor+automatisk+honslucka&tag=honsguiden-21",
         "affiliate": true,
         "network": "amazon",
         "placeholder": true
@@ -293,7 +293,7 @@
     "buy_urls": [
       {
         "store": "Amazon.se",
-        "url": "https://www.amazon.se/s?k=chickcozy+solar&tag=honsgarden-21",
+        "url": "https://www.amazon.se/s?k=chickcozy+solar&tag=honsguiden-21",
         "affiliate": true,
         "network": "amazon",
         "placeholder": true
