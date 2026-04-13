@@ -1,0 +1,10 @@
+name = "honsguiden-analytics"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "STATS"
+id = "f68ac5fedd0a4494bce043c9d02b5f69"
+
+[vars]
+DASHBOARD_PASSWORD = "honsguiden2026"

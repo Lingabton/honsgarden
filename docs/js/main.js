@@ -1,10 +1,23 @@
 /* ========================================
-   HÖNSGÅRDEN — Main JS
-   Progressive enhancement only
+   Hönsguiden — Main JS
    ======================================== */
 
 (function () {
   'use strict';
+
+  // --- Analytics (cookiefri) ---
+  function trackPageView() {
+    if (navigator.doNotTrack === '1') return;
+    var data = {
+      page: location.pathname,
+      referrer: document.referrer ? new URL(document.referrer).hostname : 'direct'
+    };
+    fetch('https://honsguiden-analytics.smakfynd.workers.dev/api/hit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).catch(function() {});
+  }
 
   // --- Scroll animations (Intersection Observer) ---
   function initAnimations() {
@@ -262,6 +275,7 @@
 
   // --- Init ---
   document.addEventListener('DOMContentLoaded', function () {
+    trackPageView();
     initAnimations();
     initMobileNav();
     initPopularProducts();
