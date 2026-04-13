@@ -1335,6 +1335,64 @@ select:focus-visible {
   padding: 0.5rem 0.75rem;
 }
 
+/* --- Product reviews --- */
+.product-reviews {
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--border);
+}
+
+.product-reviews h4 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.review-quote {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
+}
+
+.review-source {
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+}
+
+.review-source a {
+  color: var(--text-tertiary);
+  text-decoration: underline;
+}
+
+.review-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.review-stars {
+  color: #d4a84b;
+  letter-spacing: -1px;
+}
+
+.review-item {
+  margin-bottom: 0.6rem;
+}
+
+.review-item:last-child {
+  margin-bottom: 0;
+}
+
 /* --- Simple table (inline content tables) --- */
 .simple-table {
   width: 100%;
