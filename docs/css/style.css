@@ -298,9 +298,9 @@ p {
 }
 @media (max-width: 768px) {
   .hero-image-wrapper {
-    max-height: 260px;
+    max-height: 180px;
     border-radius: 0;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
   }
 }
 

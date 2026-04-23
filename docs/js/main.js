@@ -273,6 +273,22 @@
     });
   }
 
+  // --- Accessibility: aria-labels for table cells and score badges ---
+  function initAccessibility() {
+    document.querySelectorAll('.cell-check').forEach(function(el) {
+      el.setAttribute('aria-label', 'Ja');
+      el.setAttribute('role', 'cell');
+    });
+    document.querySelectorAll('.cell-cross').forEach(function(el) {
+      el.setAttribute('aria-label', 'Nej');
+      el.setAttribute('role', 'cell');
+    });
+    document.querySelectorAll('.score-badge').forEach(function(el) {
+      var score = el.textContent.trim();
+      el.setAttribute('aria-label', 'Betyg: ' + score + ' av 10');
+    });
+  }
+
   // --- Init ---
   document.addEventListener('DOMContentLoaded', function () {
     trackPageView();
@@ -284,6 +300,7 @@
     initSmoothScroll();
     initNewsletter();
     initActiveNav();
+    initAccessibility();
   });
 
 })();
