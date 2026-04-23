@@ -282,6 +282,27 @@ p {
   position: relative;
   overflow: hidden;
 }
+.hero-image-wrapper {
+  width: 100%;
+  max-height: 420px;
+  overflow: hidden;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  margin-bottom: var(--spacing-lg);
+}
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  display: block;
+}
+@media (max-width: 768px) {
+  .hero-image-wrapper {
+    max-height: 260px;
+    border-radius: 0;
+    margin-bottom: var(--spacing-md);
+  }
+}
 
 /* no decorative blobs */
 
@@ -1518,6 +1539,18 @@ select:focus-visible {
   max-width: 720px;
   margin-top: var(--spacing-md);
   font-style: italic;
+}
+
+.article-byline {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  margin-top: var(--spacing-xs);
+}
+.article-byline strong {
+  color: var(--text-secondary);
+}
+.article-byline time {
+  color: var(--text-tertiary);
 }
 
 /* --- FAQ accordion --- */
