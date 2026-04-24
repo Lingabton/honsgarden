@@ -389,6 +389,24 @@
     });
   }
 
+  // --- Back to top button ---
+  function initBackToTop() {
+    var btn = document.createElement('button');
+    btn.className = 'back-to-top';
+    btn.setAttribute('aria-label', 'Tillbaka till toppen');
+    btn.innerHTML = '↑';
+    btn.style.display = 'none';
+    document.body.appendChild(btn);
+
+    btn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', function() {
+      btn.style.display = window.scrollY > 500 ? '' : 'none';
+    }, { passive: true });
+  }
+
   // --- Init ---
   document.addEventListener('DOMContentLoaded', function () {
     trackPageView();
@@ -405,6 +423,7 @@
     initNewsletter();
     initActiveNav();
     initAccessibility();
+    initBackToTop();
   });
 
 })();

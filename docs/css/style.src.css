@@ -1582,6 +1582,16 @@ select:focus-visible {
   color: var(--text-tertiary);
 }
 
+/* --- Quick verdict --- */
+.quick-verdict {
+  padding: var(--spacing-md) 0;
+}
+.quick-verdict .article-content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 100%;
+}
+
 /* --- FAQ accordion --- */
 .faq-item {
   border-bottom: 1px solid var(--border);
@@ -1699,8 +1709,31 @@ select:focus-visible {
   display: block;
 }
 
+/* --- Back to top button --- */
+.back-to-top {
+  position: fixed;
+  bottom: var(--spacing-lg);
+  right: var(--spacing-md);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 90;
+  box-shadow: var(--shadow-card);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0.7;
+}
+.back-to-top:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
 @media print {
-  .nav, .footer, .newsletter, .nav-overlay, .filters {
+  .nav, .footer, .newsletter, .nav-overlay, .filters, .back-to-top {
     display: none !important;
   }
   body {
