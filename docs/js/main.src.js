@@ -346,14 +346,13 @@
       var btn = form.querySelector('button');
       if (!input || !btn) return;
 
-      // Simple feedback — replace with real integration later
+      // Placeholder — inte kopplat till något ännu
       var email = input.value;
-      btn.textContent = 'Tack!';
+      btn.textContent = 'Kommer snart!';
       btn.disabled = true;
       input.disabled = true;
       input.value = '';
 
-      // Reset after 3s
       setTimeout(function () {
         btn.textContent = 'Prenumerera';
         btn.disabled = false;
