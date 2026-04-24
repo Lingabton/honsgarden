@@ -1390,6 +1390,35 @@ select:focus-visible {
   color: var(--text-tertiary);
   text-decoration: underline;
 }
+.review-links {
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--border);
+}
+.review-links h4 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  margin-bottom: 0.4rem;
+}
+.review-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.review-links li a {
+  font-size: 0.8rem;
+  color: var(--accent-primary);
+  text-decoration: none;
+}
+.review-links li a:hover {
+  text-decoration: underline;
+}
 
 .review-rating {
   display: inline-flex;
