@@ -27,6 +27,17 @@ export default {
 
     // POST /api/hit — logga sidvisning
     if (url.pathname === "/api/hit" && request.method === "POST") {
+      // Enkel rate limiting: max 100 req/min per IP
+      const ip = request.headers.get("CF-Connecting-IP") || "unknown";
+      const rateKey = `rate:${ip}:${Math.floor(Date.now() / 60000)}`;
+      const reqCount = parseInt((await env.STATS.get(rateKey)) || "0", 10);
+      if (reqCount > 100) {
+        return new Response('{"ok":false,"error":"rate_limited"}', {
+          status: 429,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        });
+      }
+      await env.STATS.put(rateKey, String(reqCount + 1), { expirationTtl: 120 });
       return handleHit(request, env, corsHeaders);
     }
 
@@ -42,8 +53,10 @@ export default {
 async function handleHit(request, env, corsHeaders) {
   try {
     const body = await request.json();
-    const page = sanitize(body.page || "/");
-    const referrer = sanitize(body.referrer || "direct");
+    const rawPage = sanitize(body.page || "/");
+    const rawReferrer = sanitize(body.referrer || "direct");
+    const page = isValidPage(rawPage) ? rawPage : "/";
+    const referrer = isValidReferrer(rawReferrer) ? rawReferrer : "other";
     const country = request.cf?.country || "??";
     const device = parseDevice(request.headers.get("User-Agent") || "");
     const today = new Date().toISOString().slice(0, 10); // 2026-04-13
@@ -204,7 +217,15 @@ function parseDevice(ua) {
 }
 
 function sanitize(str) {
-  return str.slice(0, 200).replace(/[<>"'&]/g, "");
+  return str.slice(0, 200).replace(/[<>"'&;(){}[\]\\]/g, "").replace(/\s+/g, " ").trim();
+}
+
+function isValidPage(str) {
+  return /^\/[a-zA-Z0-9\-_./]*$/.test(str);
+}
+
+function isValidReferrer(str) {
+  return str === "direct" || /^[a-zA-Z0-9.\-]+$/.test(str);
 }
 
 function escapeHtml(str) {
