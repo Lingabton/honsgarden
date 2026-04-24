@@ -8,3 +8,8 @@ id = "f68ac5fedd0a4494bce043c9d02b5f69"
 
 [vars]
 DASHBOARD_PASSWORD = "honsguiden2026"
+REPORT_EMAIL = "gabriel@honsguiden.se"
+
+# Veckorapport varje måndag kl 07:00 UTC
+[triggers]
+crons = ["0 7 * * 1"]

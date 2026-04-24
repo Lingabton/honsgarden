@@ -6,17 +6,117 @@
   'use strict';
 
   // --- Analytics (cookiefri) ---
+  var ANALYTICS_URL = 'https://honsguiden-analytics.smakfynd.workers.dev';
+
   function trackPageView() {
     if (navigator.doNotTrack === '1') return;
     var data = {
       page: location.pathname,
       referrer: document.referrer ? new URL(document.referrer).hostname : 'direct'
     };
-    fetch('https://honsguiden-analytics.smakfynd.workers.dev/api/hit', {
+    fetch(ANALYTICS_URL + '/api/hit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     }).catch(function() {});
+  }
+
+  function sendEvent(eventData) {
+    if (navigator.doNotTrack === '1') return;
+    eventData.page = location.pathname;
+    fetch(ANALYTICS_URL + '/api/event', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(eventData)
+    }).catch(function() {});
+  }
+
+  // Spåra köpklick
+  function initClickTracking() {
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('.btn-buy');
+      if (!link) return;
+
+      // Hitta produktnamn från närmaste product-detail/product-card
+      var card = link.closest('.product-detail') || link.closest('.product-card');
+      var product = 'unknown';
+      if (card) {
+        var h3 = card.querySelector('h3');
+        if (h3) product = h3.textContent.trim();
+      }
+
+      var store = link.textContent.trim();
+
+      sendEvent({
+        type: 'click',
+        product: product,
+        store: store
+      });
+    });
+  }
+
+  // Spåra scroll-djup
+  function initScrollTracking() {
+    var milestones = { 25: false, 50: false, 75: false, 100: false };
+    var docHeight, winHeight;
+
+    function updateHeights() {
+      docHeight = document.documentElement.scrollHeight;
+      winHeight = window.innerHeight;
+    }
+
+    updateHeights();
+
+    window.addEventListener('scroll', function() {
+      updateHeights();
+      var scrolled = window.scrollY + winHeight;
+      var percent = Math.round((scrolled / docHeight) * 100);
+
+      [25, 50, 75, 100].forEach(function(m) {
+        if (percent >= m && !milestones[m]) {
+          milestones[m] = true;
+          sendEvent({ type: 'scroll', depth: m });
+        }
+      });
+    }, { passive: true });
+  }
+
+  // Spåra tid på sidan (skickar vid unload)
+  function initTimeTracking() {
+    var startTime = Date.now();
+    var sent = false;
+
+    function sendTime() {
+      if (sent) return;
+      sent = true;
+      var seconds = Math.round((Date.now() - startTime) / 1000);
+      if (seconds < 2) return; // Ignörera bounces
+      // Använd sendBeacon för att säkerställa leverans vid unload
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(ANALYTICS_URL + '/api/event', JSON.stringify({
+          type: 'time',
+          seconds: seconds,
+          page: location.pathname
+        }));
+      } else {
+        sendEvent({ type: 'time', seconds: seconds });
+      }
+    }
+
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') sendTime();
+    });
+    window.addEventListener('beforeunload', sendTime);
+  }
+
+  // Spåra FAQ-klick
+  function initFaqTracking() {
+    document.querySelectorAll('.faq-item summary').forEach(function(summary) {
+      summary.addEventListener('click', function() {
+        var question = summary.textContent.trim().slice(0, 80);
+        sendEvent({ type: 'faq', question: question });
+      });
+    });
   }
 
   // --- Scroll animations (Intersection Observer) ---
@@ -292,6 +392,10 @@
   // --- Init ---
   document.addEventListener('DOMContentLoaded', function () {
     trackPageView();
+    initClickTracking();
+    initScrollTracking();
+    initTimeTracking();
+    initFaqTracking();
     initAnimations();
     initMobileNav();
     initPopularProducts();
