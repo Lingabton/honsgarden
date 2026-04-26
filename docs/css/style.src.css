@@ -5,20 +5,20 @@
 
 /* --- Design Tokens --- */
 :root {
-  /* Bas — vitt med en aning värme */
-  --bg-primary: #fefefe;
-  --bg-secondary: #f5f3ef;
+  /* Bas — varmt äggskalsvis */
+  --bg-primary: #FDFBF7;
+  --bg-secondary: #F0EBE3;
   --bg-card: #ffffff;
 
-  /* Text */
-  --text-primary: #222;
-  --text-secondary: #555;
-  --text-tertiary: #888;
+  /* Text — varm brun, inte svart */
+  --text-primary: #2C2416;
+  --text-secondary: #5C4F3D;
+  --text-tertiary: #9C8E7E;
 
-  /* Accent — terracotta + en lugn grön för variation */
-  --accent-primary: #b5482a;
-  --accent-secondary: #4a6741;
-  --accent-highlight: #b5482a;
+  /* Accent — skarp terracotta + djup mossgrön */
+  --accent-primary: #C4653A;
+  --accent-secondary: #2D5A3F;
+  --accent-highlight: #D4A84B;
 
   /* Functional */
   --border: #e5e5e5;
@@ -93,29 +93,33 @@ a:hover {
 /* --- Typography --- */
 h1, h2, h3, h4 {
   font-family: 'Fraunces', Georgia, serif;
-  font-weight: 600;
-  line-height: 1.15;
+  font-weight: 800;
+  line-height: 1.1;
   color: var(--text-primary);
 }
 
 h1 {
-  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  font-weight: 900;
   font-variation-settings: 'SOFT' 50, 'WONK' 0;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
+  letter-spacing: -0.03em;
+  line-height: 1.0;
 }
 
 h2 {
-  font-size: clamp(1.35rem, 3vw, 1.7rem);
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 800;
   font-variation-settings: 'SOFT' 30, 'WONK' 0;
 }
 
 h3 {
-  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 700;
 }
 
 h4 {
-  font-size: 1.05rem;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 p {
@@ -125,10 +129,10 @@ p {
 
 .label {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 200;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.14em;
   color: var(--text-tertiary);
 }
 
@@ -170,9 +174,10 @@ p {
 
 .nav-logo {
   font-family: 'Fraunces', serif;
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 900;
   color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
 .nav-logo:hover {
@@ -281,6 +286,7 @@ p {
   text-align: left;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
 }
 .hero-image-wrapper {
   width: 100%;
@@ -347,17 +353,33 @@ p {
 }
 
 .cover-card--terracotta {
-  background: var(--bg-secondary);
-  color: var(--text-primary);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--accent-primary);
+  background: linear-gradient(135deg, #C4653A 0%, #A84E28 100%);
+  color: #fff;
+  border: none;
+}
+.cover-card--terracotta .label {
+  color: rgba(255, 255, 255, 0.7);
+}
+.cover-card--terracotta h3 {
+  color: #fff;
+}
+.cover-card--terracotta p {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .cover-card--green {
-  background: var(--bg-secondary);
-  color: var(--text-primary);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--accent-secondary);
+  background: linear-gradient(135deg, #2D5A3F 0%, #1E3F2B 100%);
+  color: #fff;
+  border: none;
+}
+.cover-card--green .label {
+  color: rgba(255, 255, 255, 0.7);
+}
+.cover-card--green h3 {
+  color: #fff;
+}
+.cover-card--green p {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .cover-card .label {
@@ -461,7 +483,7 @@ p {
   align-items: center;
   justify-content: center;
   font-family: 'Fraunces', serif;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 0.95rem;
   color: white;
   flex-shrink: 0;
@@ -641,10 +663,12 @@ p {
 
 /* --- Newsletter --- */
 .newsletter {
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: var(--spacing-xl) 0;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, #E8DFD1 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl) var(--spacing-lg);
   text-align: left;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 .newsletter h2 {
@@ -693,7 +717,8 @@ p {
 
 /* --- Footer --- */
 .footer {
-  border-top: 1px solid var(--border);
+  background: var(--bg-secondary);
+  border-top: none;
   padding: var(--spacing-xl) 0 var(--spacing-lg);
   margin-top: var(--spacing-xl);
 }
@@ -708,7 +733,7 @@ p {
 .footer-brand {
   font-family: 'Fraunces', serif;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 0.5rem;
   color: var(--text-primary);
 }
@@ -959,12 +984,15 @@ p {
 }
 
 .pull-quote {
-  border-left: 2px solid var(--border-strong);
+  border-left: 3px solid var(--accent-primary);
   padding: 0 0 0 var(--spacing-md);
   margin: var(--spacing-lg) 0;
-  font-size: 1.05rem;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 300;
   font-style: italic;
-  color: var(--text-secondary);
+  color: var(--text-primary);
+  line-height: 1.5;
 }
 
 /* Table of contents */
@@ -1116,6 +1144,7 @@ select:focus-visible {
 /* --- Page-specific helpers --- */
 .page-header {
   padding-bottom: 0;
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
 }
 
 .page-header .hero-subtitle {
