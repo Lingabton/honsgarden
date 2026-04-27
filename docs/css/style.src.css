@@ -1315,9 +1315,9 @@ select:focus-visible {
 
 /* --- Product detail grid --- */
 .product-detail-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
 }
 
 .product-detail {
@@ -1325,14 +1325,12 @@ select:focus-visible {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: var(--spacing-md);
-  display: flex;
-  flex-direction: column;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: none;
 }
 
 .product-detail:hover {
-  box-shadow: var(--shadow-card);
-  transform: translateY(-2px);
+  box-shadow: none;
+  transform: none;
 }
 
 .product-detail .product-image {
@@ -1776,6 +1774,101 @@ select:focus-visible {
 .btn-table-buy:hover {
   background: #a8522e;
   color: #fff;
+}
+
+/* --- Collapsed product cards --- */
+.product-summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.product-summary .product-detail-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  min-height: auto;
+}
+
+.product-summary-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.product-summary-info h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.product-summary .product-card-price {
+  font-size: 1.15rem;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.product-summary .buy-buttons {
+  margin-top: var(--spacing-xs);
+  padding-top: 0;
+  justify-content: flex-start;
+}
+
+.product-expand {
+  margin-top: var(--spacing-sm);
+  border-top: 1px solid var(--border);
+}
+
+.product-expand summary {
+  padding: var(--spacing-xs) 0;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent-primary);
+  cursor: pointer;
+  list-style: none;
+}
+
+.product-expand summary::-webkit-details-marker {
+  display: none;
+}
+
+.product-expand summary::after {
+  content: ' \25BE';
+}
+
+.product-expand[open] summary::after {
+  content: ' \25B4';
+}
+
+.product-expand[open] summary {
+  margin-bottom: var(--spacing-sm);
+}
+
+.product-expand-content {
+  padding-bottom: var(--spacing-sm);
+}
+
+.product-expand .product-image {
+  margin-bottom: var(--spacing-sm);
+  max-width: 300px;
+}
+
+@media (min-width: 768px) {
+  .product-summary .product-detail-header {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-summary .product-detail-header {
+    flex-wrap: wrap;
+  }
+  .product-summary .product-card-price {
+    width: 100%;
+  }
 }
 
 @media print {
