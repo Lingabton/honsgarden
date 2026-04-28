@@ -967,14 +967,16 @@ p {
 
 /* Check/cross icons */
 .cell-check::before {
-  content: '\2713';
+  content: '✓';
   color: var(--score-excellent);
   font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .cell-cross::before {
-  content: '\2717';
+  content: '–';
   color: var(--text-tertiary);
+  font-size: 0.9rem;
 }
 
 /* --- Filters --- */
