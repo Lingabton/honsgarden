@@ -2052,3 +2052,29 @@ select:focus-visible {
 .next-step .btn {
   display: inline-flex;
 }
+
+/* --- Filter mobile stack --- */
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .filter-group {
+    width: 100%;
+  }
+  .filter-group select {
+    width: 100%;
+  }
+}
+
+/* --- Category card SVG icons --- */
+.category-icon-svg {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto var(--spacing-xs);
+  display: block;
+  color: var(--accent-primary);
+}
+.category-card:hover .category-icon-svg {
+  color: var(--accent-secondary);
+}
