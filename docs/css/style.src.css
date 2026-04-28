@@ -104,6 +104,7 @@ h1 {
   font-variation-settings: 'SOFT' 50, 'WONK' 0;
   letter-spacing: -0.03em;
   line-height: 1.0;
+  text-wrap: balance;
 }
 
 h2 {
@@ -1979,4 +1980,10 @@ select:focus-visible {
 .btn-table-buy:hover {
   background: #a8522e;
   color: #fff;
+}
+
+/* --- Table cell nowrap for prices and warranty --- */
+.comparison-table td:nth-child(3),
+.comparison-table td:nth-child(9) {
+  white-space: nowrap;
 }
