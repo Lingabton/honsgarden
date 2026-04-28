@@ -1987,3 +1987,68 @@ select:focus-visible {
 .comparison-table td:nth-child(9) {
   white-space: nowrap;
 }
+
+/* --- Quickpick CTA section --- */
+.quickpick {
+  padding: var(--spacing-md) 0;
+}
+.quickpick-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-sm);
+  max-width: 720px;
+  margin-top: var(--spacing-sm);
+}
+.quickpick-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+.quickpick-card:first-child {
+  border-left: 3px solid var(--accent-primary);
+}
+.quickpick-card:last-child {
+  border-left: 3px solid var(--accent-secondary);
+}
+.quickpick-label {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-tertiary);
+}
+.quickpick-card h3 {
+  font-size: 1.05rem;
+  margin: 0.3rem 0;
+}
+.quickpick-meta {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+.quickpick-card .btn {
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .quickpick-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Bridging CTA at end of guides --- */
+.next-step {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, #E8DFD1 100%);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+.next-step h3 {
+  margin-bottom: var(--spacing-xs);
+}
+.next-step p {
+  margin-bottom: var(--spacing-sm);
+  max-width: 100%;
+}
+.next-step .btn {
+  display: inline-flex;
+}
