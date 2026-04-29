@@ -1,155 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="utf-8">
   <title>Vad kostar det att ha höns? Kalkylator | Hönsguiden</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Räkna ut din månadskostnad och kostnad per ägg. Interaktiv kalkylator baserad på svenska priser 2026 och mina egna kostnader.">
-  <meta name="author" content="Gabriel">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://honsguiden.se/tools/kostnad.html">
-
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://honsguiden.se/tools/kostnad.html">
-  <meta property="og:title" content="Vad kostar det att ha höns? Kalkylator">
-  <meta property="og:description" content="Räkna ut din månadskostnad och kostnad per ägg med svenska priser.">
-  <meta property="og:image" content="https://honsguiden.se/img/photos/gabriel-flock-2025.webp">
-  <meta property="og:site_name" content="Hönsguiden">
-  <meta property="og:locale" content="sv_SE">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Vad kostar det att ha höns? Kalkylator">
-  <meta name="twitter:image" content="https://honsguiden.se/img/photos/gabriel-flock-2025.webp">
-
-  <meta name="theme-color" content="#C4653A">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐔</text></svg>">
-  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐔</text></svg>">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Caveat:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Hönsguiden", "item": "https://honsguiden.se/" },
-      { "@type": "ListItem", "position": 2, "name": "Verktyg", "item": "https://honsguiden.se/tools/kostnad.html" },
-      { "@type": "ListItem", "position": 3, "name": "Kostnadskalkylator", "item": "https://honsguiden.se/tools/kostnad.html" }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "Räcker fyra höns för en familj?", "acceptedAnswer": { "@type": "Answer", "text": "En höna lägger ungefär 4 ägg i veckan i värpsäsong. Fyra höns ger alltså 16 ägg/vecka, ungefär vad en familj på 4 personer äter." } },
-      { "@type": "Question", "name": "Kan höns betala för sig själva?", "acceptedAnswer": { "@type": "Answer", "text": "Räknar man bara material och foder: ja, marginellt. Räknar man tid: nej, aldrig. Det handlar inte om att spara pengar utan om att vilja göra det." } },
-      { "@type": "Question", "name": "Vilken är den största oförväntade kostnaden?", "acceptedAnswer": { "@type": "Answer", "text": "Veterinär, om en höna blir sjuk. Ett enda besök kan kosta 1500-3000 kr, mer än en värphöna är värd ekonomiskt." } },
-      { "@type": "Question", "name": "Hur länge värper en höna?", "acceptedAnswer": { "@type": "Answer", "text": "3-4 år bra produktion, sen avtar det. En lantras kan leva i 8-10 år. En hybrid slutar värpa snabbare." } },
-      { "@type": "Question", "name": "Är det billigare att köpa unghöns eller kläcka själv?", "acceptedAnswer": { "@type": "Answer", "text": "Köpa. Kläckare kostar 1500+ kr, hälften av kycklingarna blir tuppar du måste avliva." } },
-      { "@type": "Question", "name": "Vad om jag bara vill ha höns för skojs skull?", "acceptedAnswer": { "@type": "Answer", "text": "Räkna med 200-300 kr/månad i löpande kostnader för 4-6 höns, och 5000-15000 kr i engångsinvestering år 1." } }
-    ]
-  }
-  </script>
-
-  <style>
-    .calc-section { padding: var(--spacing-lg) 0; }
-    .calc-form { max-width: 640px; }
-    .calc-group { margin-bottom: var(--spacing-md); }
-    .calc-group label { display: block; font-family: 'Fraunces', serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.4rem; color: var(--text-primary); }
-    .calc-group .calc-hint { font-size: 0.8rem; color: var(--text-tertiary); margin-bottom: 0.5rem; }
-
-    .slider-wrap { display: flex; align-items: center; gap: var(--spacing-sm); }
-    .slider-wrap input[type="range"] { flex: 1; height: 8px; -webkit-appearance: none; background: var(--border); border-radius: 4px; outline: none; }
-    .slider-wrap input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 28px; height: 28px; border-radius: 50%; background: var(--accent-primary); cursor: pointer; }
-    .slider-value { font-family: 'Fraunces', serif; font-weight: 900; font-size: 1.5rem; min-width: 2.5rem; text-align: center; color: var(--accent-primary); }
-
-    .radio-group { display: flex; flex-direction: column; gap: 0.4rem; }
-    .radio-group label { font-family: 'Instrument Sans', sans-serif; font-weight: 400; font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); border: 1.5px solid var(--border); transition: border-color 0.15s; }
-    .radio-group label:has(input:checked) { border-color: var(--accent-primary); background: rgba(196, 101, 58, 0.05); }
-    .radio-group input { accent-color: var(--accent-primary); }
-
-    .checkbox-group { display: flex; flex-direction: column; gap: 0.4rem; }
-    .checkbox-group label { font-family: 'Instrument Sans', sans-serif; font-weight: 400; font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); border: 1.5px solid var(--border); transition: border-color 0.15s; }
-    .checkbox-group label:has(input:checked) { border-color: var(--accent-primary); background: rgba(196, 101, 58, 0.05); }
-    .checkbox-group input { accent-color: var(--accent-primary); }
-
-    .result-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-sm); margin: var(--spacing-lg) 0; position: sticky; top: 70px; z-index: 10; background: var(--bg-primary); padding: var(--spacing-sm) 0; border-bottom: 1px solid var(--border); }
-    .result-card { background: var(--bg-card); border: 1.5px solid var(--border); border-radius: var(--radius-md); padding: var(--spacing-md); text-align: center; }
-    .result-card .big { font-family: 'Fraunces', serif; font-weight: 900; font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--accent-primary); line-height: 1; }
-    .result-card .unit { font-size: 0.85rem; color: var(--text-tertiary); margin-top: 0.3rem; }
-    .result-card.highlight { border-color: var(--accent-primary); }
-
-    .breakdown-table { width: 100%; border-collapse: collapse; margin: var(--spacing-sm) 0; }
-    .breakdown-table td { padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
-    .breakdown-table td:last-child { text-align: right; font-weight: 600; font-family: 'Fraunces', serif; }
-    .breakdown-table tr:last-child td { border-bottom: 2px solid var(--text-primary); font-weight: 700; color: var(--text-primary); }
-
-    .comparison-callout { background: linear-gradient(135deg, var(--bg-secondary) 0%, #E8DFD1 100%); border-radius: var(--radius-md); padding: var(--spacing-lg); margin: var(--spacing-lg) 0; }
-    .comparison-callout h3 { margin-bottom: var(--spacing-xs); }
-    .comparison-callout .footnote { font-size: 0.82rem; color: var(--text-tertiary); margin-top: var(--spacing-sm); font-style: italic; }
-
-    @media (max-width: 600px) {
-      .result-cards { grid-template-columns: 1fr; position: static; }
-      .result-card .big { font-size: 2rem; }
-    }
-  </style>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Hoppa till innehållet</a>
+  <div class="wrap">
 
-  <nav class="nav" role="navigation" aria-label="Huvudnavigation">
-    <div class="container nav-inner">
-      <a href="../" class="nav-logo">Hönsguiden</a>
-      <ul class="nav-links">
-        <li><a href="../luckoppnare.html">Lucköppnare</a></li>
-        <li><a href="../honshus.html">Hönshus</a></li>
-        <li><a href="../foderautomater.html">Foder</a></li>
-        <li><a href="../guider.html">Guider</a></li>
-      </ul>
-      <button type="button" class="nav-toggle" aria-label="Öppna meny" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
-    </div>
-  </nav>
+    <header class="masthead">
+      <div>
+        <div class="brand"><a href="../" style="color:inherit;text-decoration:none">Hönsguiden</a></div>
+        <div class="tagline">anteckningsbok från en trädgård i Örebro</div>
+      </div>
+      <nav>
+        <a href="../luckoppnare.html">Lucköppnare</a>
+        <a href="../honshus.html">Hönshus</a>
+        <a href="../foderautomater.html">Foder</a>
+        <a href="../vattenautomater.html">Vatten</a>
+        <a href="../varmeplattor.html">Värme</a>
+        <a href="../om-mig.html" class="muted">Om mig</a>
+      </nav>
+    </header>
 
-  <div class="nav-overlay" id="navOverlay" role="dialog" aria-label="Mobilmeny">
-    <button type="button" class="nav-overlay-close" aria-label="Stäng meny">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-    <a href="../">Startsida</a>
-    <a href="../luckoppnare.html">Lucköppnare</a>
-    <a href="../foderautomater.html">Foderautomater</a>
-    <a href="../vattenautomater.html">Vattenautomater</a>
-    <a href="../honshus.html">Hönshus</a>
-    <a href="../varmeplattor.html">Värmeplattor</a>
-    <a href="../guider.html">Guider</a>
-    <a href="../om.html">Om</a>
-  </div>
-
-  <header class="section page-header" id="main-content">
-    <div class="container">
+    <main>
+<header  id="main-content">
+    <div >
       <div class="article-content">
-        <nav class="breadcrumb animate-in" aria-label="Brödsmulor">
+        <nav class="breadcrumb" aria-label="Brödsmulor">
           <ol>
             <li><a href="../">Hönsguiden</a></li>
             <li aria-current="page">Kostnadskalkylator</li>
           </ol>
         </nav>
-        <p class="label animate-in stagger-1">Verktyg</p>
-        <h1 class="animate-in stagger-2">Vad kostar det att ha höns?</h1>
-        <p class="hero-subtitle animate-in stagger-3">Räkna ut din månadskostnad och kostnad per ägg. Baserat på svenska priser 2026.</p>
+        <p class="label">Verktyg</p>
+        <h1>Vad kostar det att ha höns?</h1>
+        <p class="hero-subtitle">Räkna ut din månadskostnad och kostnad per ägg. Baserat på svenska priser 2026.</p>
       </div>
     </div>
   </header>
 
   <section class="calc-section">
-    <div class="container">
+    <div >
 
       <!-- RESULTAT (sticky) -->
       <div class="result-cards" id="result-cards" aria-live="polite">
@@ -221,7 +118,7 @@
       </aside>
 
       <!-- CTA -->
-      <aside class="next-step animate-in" style="margin-top:var(--spacing-lg)">
+      <aside class="next-step" style="margin-top:var(--spacing-lg)">
         <h3>Redo att komma igång?</h3>
         <p>Kolla vilken utrustning du behöver.</p>
         <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
@@ -234,28 +131,28 @@
   </section>
 
   <!-- SEO-CONTENT -->
-  <article class="section">
-    <div class="container">
+  <article >
+    <div >
       <div class="article-content">
 
-        <h2 class="animate-in">Hur jag har räknat</h2>
-        <p class="animate-in">Foderkostnaden är den största löpande posten. En medelstor höna äter ungefär 110 gram foder per dag. Med färdigfoder från Granngården eller Lantmännen (runt 12 kr/kg) blir det ungefär 40 kr per höna och månad. Köper du säckfoder direkt från en lantbrukare halveras den siffran nästan.</p>
+        <h2>Hur jag har räknat</h2>
+        <p>Foderkostnaden är den största löpande posten. En medelstor höna äter ungefär 110 gram foder per dag. Med färdigfoder från Granngården eller Lantmännen (runt 12 kr/kg) blir det ungefär 40 kr per höna och månad. Köper du säckfoder direkt från en lantbrukare halveras den siffran nästan.</p>
 
-        <p class="animate-in">Strö (kutterspån) kostar runt 7-8 kr per höna och månad. Snäckskal för kalcium och lite vitamintillskott lägger på ytterligare en tredjedel. Jordbruksverkets registreringsavgift (120 kr/år) och en uppskattad veterinärbudget (200 kr/år) sprids ut per månad.</p>
+        <p>Strö (kutterspån) kostar runt 7-8 kr per höna och månad. Snäckskal för kalcium och lite vitamintillskott lägger på ytterligare en tredjedel. Jordbruksverkets registreringsavgift (120 kr/år) och en uppskattad veterinärbudget (200 kr/år) sprids ut per månad.</p>
 
-        <p class="animate-in">Äggproduktionen räknar jag på 220 ägg per höna och år, vilket är ett genomsnitt över vanliga raser (Sussex, Australorp, Plymouth Rock). Hybrider som Lohmann Brown lägger 300+, lantraser som Hedemora kanske 180. Snittet 220 är konservativt men realistiskt för en blandad hobbyflock.</p>
+        <p>Äggproduktionen räknar jag på 220 ägg per höna och år, vilket är ett genomsnitt över vanliga raser (Sussex, Australorp, Plymouth Rock). Hybrider som Lohmann Brown lägger 300+, lantraser som Hedemora kanske 180. Snittet 220 är konservativt men realistiskt för en blandad hobbyflock.</p>
 
-        <h2 class="animate-in">Vad jag inte räknar med</h2>
-        <p class="animate-in">Tid. Det är medvetet. Om du räknar 15 minuter om dagen till konsultlön blir äggen plötsligt dyrare än guld. Men ingen räknar tid för sin rabatt, sin trädgård, eller sina barn heller. Höns är ett val du gör för att du vill, inte för avkastningen.</p>
+        <h2>Vad jag inte räknar med</h2>
+        <p>Tid. Det är medvetet. Om du räknar 15 minuter om dagen till konsultlön blir äggen plötsligt dyrare än guld. Men ingen räknar tid för sin rabatt, sin trädgård, eller sina barn heller. Höns är ett val du gör för att du vill, inte för avkastningen.</p>
 
-        <p class="animate-in">Jag räknar inte heller med oväntade veterinärkostnader. Ett enda besök kan kosta 1 500-3 000 kr, vilket är mer än vad de flesta värphöns är "värda" ekonomiskt. Många hönsägare hanterar sjukdom utan veterinär. Det är en realitet av hobbyhönsskötsel som sällan diskuteras i förväg.</p>
+        <p>Jag räknar inte heller med oväntade veterinärkostnader. Ett enda besök kan kosta 1 500-3 000 kr, vilket är mer än vad de flesta värphöns är "värda" ekonomiskt. Många hönsägare hanterar sjukdom utan veterinär. Det är en realitet av hobbyhönsskötsel som sällan diskuteras i förväg.</p>
 
-        <h2 class="animate-in">Mina egna kostnader 2025</h2>
-        <p class="animate-in">Jag hade fyra kycklingar sommaren 2025. Mitt hemmabyggda hönshus kostade runt 2 800 kr i material (jag hade mycket hemma redan). Okköbi-lucköppnaren gick på 780 kr. Foder och strö för sommaren och hösten blev kanske 600-700 kr totalt. Med allt inräknat landade mitt första halvår på ungefär 4 500 kr.</p>
+        <h2>Mina egna kostnader 2025</h2>
+        <p>Jag hade fyra kycklingar sommaren 2025. Mitt hemmabyggda hönshus kostade runt 2 800 kr i material (jag hade mycket hemma redan). Okköbi-lucköppnaren gick på 780 kr. Foder och strö för sommaren och hösten blev kanske 600-700 kr totalt. Med allt inräknat landade mitt första halvår på ungefär 4 500 kr.</p>
 
-        <p class="animate-in">De hann aldrig börja värpa (de var kycklingar), så jag kan inte ge dig en riktig kostnad-per-ägg från min egen erfarenhet. Men kalkylatorn ovan ger dig en rimlig uppskattning baserad på svenska priser och normalproduktion.</p>
+        <p>De hann aldrig börja värpa (de var kycklingar), så jag kan inte ge dig en riktig kostnad-per-ägg från min egen erfarenhet. Men kalkylatorn ovan ger dig en rimlig uppskattning baserad på svenska priser och normalproduktion.</p>
 
-        <h2 id="faq" class="animate-in">Vanliga frågor</h2>
+        <h2 id="faq">Vanliga frågor</h2>
 
         <details class="faq-item">
           <summary>Räcker fyra höns för en familj?</summary>
@@ -286,46 +183,9 @@
     </div>
   </article>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">Hönsguiden</div>
-          <p>Jag samlar det jag lär mig om hönsutrustning. Mest för min egen skull.</p>
-        </div>
-        <div>
-          <h4>Jämförelser</h4>
-          <ul>
-            <li><a href="../luckoppnare.html">Lucköppnare</a></li>
-            <li><a href="../foderautomater.html">Foderautomater</a></li>
-            <li><a href="../vattenautomater.html">Vattenautomater</a></li>
-            <li><a href="../honshus.html">Hönshus</a></li>
-            <li><a href="../varmeplattor.html">Värmeplattor</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Guider</h4>
-          <ul>
-            <li><a href="../guide/skaffa-hons.html">Skaffa höns</a></li>
-            <li><a href="../guide/honsraser.html">Hönsraser</a></li>
-            <li><a href="../guide/bygga-honshus.html">Bygga hönshus</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Om</h4>
-          <ul>
-            <li><a href="../om.html">Om Hönsguiden</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Hönsguiden</span>
-        <span class="footer-disclaimer">Vissa länkar ger mig provision. <a href="../om.html">Läs mer.</a></span>
-      </div>
-    </div>
-  </footer>
+  
 
-  <script src="../js/main.js"></script>
+  
   <script>
   (function() {
     'use strict';
@@ -462,5 +322,12 @@
     calculate();
   })();
   </script>
+    </main>
+
+    <footer class="site">
+      <span>Gabriel Linton · Örebro · forskar om småskaligt lantbruk</span>
+      <span class="write">skriv till mig: hej@honsguiden.se</span>
+    </footer>
+  </div>
 </body>
 </html>

@@ -1,69 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
   <title>Vilse i hönsgården. 404</title>
-
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐔</text></svg>">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Caveat:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .error-page {
-      min-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: var(--spacing-xl) var(--spacing-md);
-    }
-    .error-hen {
-      font-size: 6rem;
-      line-height: 1;
-      margin-bottom: var(--spacing-md);
-      animation: peck 2s ease-in-out infinite;
-    }
-    @keyframes peck {
-      0%, 100% { transform: rotate(0deg); }
-      15% { transform: rotate(-12deg) translateY(4px); }
-      30% { transform: rotate(0deg); }
-    }
-    .error-code {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(4rem, 10vw, 8rem);
-      font-weight: 700;
-      color: var(--border-strong);
-      line-height: 1;
-      font-variation-settings: 'SOFT' 100;
-    }
-    .error-page h1 {
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      margin: var(--spacing-sm) 0;
-    }
-    .error-page p {
-      margin: 0 auto var(--spacing-lg);
-      max-width: 420px;
-    }
-  </style>
 </head>
 <body>
+  <div class="wrap">
 
-  <nav class="nav" role="navigation" aria-label="Huvudnavigation">
-    <div class="container nav-inner">
-      <a href="./" class="nav-logo">Hönsguiden</a>
-      <ul class="nav-links">
-        <li><a href="luckoppnare.html">Lucköppnare</a></li>
-        <li><a href="guider.html">Guider</a></li>
-      </ul>
-    </div>
-  </nav>
+    <header class="masthead">
+      <div>
+        <div class="brand"><a href="" style="color:inherit;text-decoration:none">Hönsguiden</a></div>
+        <div class="tagline">anteckningsbok från en trädgård i Örebro</div>
+      </div>
+      <nav>
+        <a href="luckoppnare.html">Lucköppnare</a>
+        <a href="honshus.html">Hönshus</a>
+        <a href="foderautomater.html">Foder</a>
+        <a href="vattenautomater.html">Vatten</a>
+        <a href="varmeplattor.html">Värme</a>
+        <a href="om-mig.html" class="muted">Om mig</a>
+      </nav>
+    </header>
 
-  <main class="error-page">
+    <main>
+<main class="error-page">
     <div class="error-hen" aria-hidden="true">🐔</div>
     <div class="error-code">404</div>
     <h1>Hönan har rymt</h1>
@@ -73,6 +39,12 @@
       <a href="luckoppnare.html" class="btn btn-secondary">Se lucköppnare</a>
     </div>
   </main>
+    </main>
 
+    <footer class="site">
+      <span>Gabriel Linton · Örebro · forskar om småskaligt lantbruk</span>
+      <span class="write">skriv till mig: hej@honsguiden.se</span>
+    </footer>
+  </div>
 </body>
 </html>
