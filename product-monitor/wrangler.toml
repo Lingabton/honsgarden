@@ -6,13 +6,9 @@ compatibility_date = "2024-01-01"
 PASSWORD = "honsguiden2026"
 REPORT_EMAIL = "gabriel.linton@gmail.com"
 
-# Daglig check kl 06:00 UTC
 [triggers]
 crons = ["0 6 * * *"]
 
-# KV för att spara resultat
 [[kv_namespaces]]
 binding = "MONITOR"
-id = ""
-# ^^^ Skapa KV namespace först: npx wrangler kv namespace create "MONITOR"
-# Klistra in ID:t här, sen deploya
+id = "2668dd7d52914c168b1b37e620147388"
