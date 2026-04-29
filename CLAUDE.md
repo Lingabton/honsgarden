@@ -1,199 +1,136 @@
-# HÖNSGUIDEN — Claude Code Brief
+# Hönsguiden — projektkontext för Claude Code
 
-## KONTEXT
+Den här filen läses automatiskt varje gång du startar en chatt i det här
+projektet. Håll den uppdaterad. Den är källan till sanning för röst och stil.
 
-Hönsguiden (honsguiden.se) är en svensk jämförelse- och guidesajt för hönsutrustning. Tänk Wirecutter fast för svenska hönsägare. Sajten drivs av en person som faktiskt har höns.
+## Vem skriver
 
-**Stack:** Statisk HTML/CSS/JS → GitHub Pages → Cloudflare DNS
-**Analytics:** Cloudflare Worker (honsguiden-analytics.smakfynd.workers.dev) med KV
-**Affiliate:** Amazon.se (tag=honsguiden-21) + svenska butiker (Granngården, Bole, Bonden, Lantkompaniet etc.)
+Gabriel Linton, 40-något, bor i Örebro, villa med tomt. Tre barn (varav minst
+ett som hjälper måla). Forskar om småskaligt lantbruk på Örebro universitet.
 
----
+Har INGA egna höns just nu. Lånade fem kycklingar säsongen 2025. Skaffar sex
+egna i maj 2026.
 
-## SAJT-STRUKTUR (17 sidor)
+Hönshus byggde Gabriel själv förra sommaren — en flyttbar tractor-modell på
+hjul, plats för 4–6 höns. Lucköppnare (Okköbi Solar) monterades samtidigt.
+
+## Sajten
+
+Affiliatesajt för svensk hönsutrustning. Nisch: backyard chickens i Sverige,
+vinter, små flockar (4–6 höns), villatomter.
+
+Konkurrenterna är AI-genererade jämförelsesajter med score-badges och bento-grids.
+Min vinst är att jag är en person. Allt på sajten ska bevisa det.
+
+Affiliateintäkter förra året: ~1 200 kr. Det räcker till en säck pellets.
+Det är en ärlig siffra och bör nämnas rakt ut, inte gömmas i en disclaimer-fotnot.
+
+## Stack
+
+Statisk HTML/CSS/JS i `docs/`. GitHub Pages serverar direkt från mappen.
+Cloudflare framför för DNS och HTTPS.
 
 ```
 docs/
-├── index.html              # Startsida med hero, cover cards, produktkort, FAQ
-├── luckoppnare.html        # 8 lucköppnare jämförda (filter, sortering)
-├── honshus.html            # 7 hönshus jämförda
-├── foderautomater.html     # 8 foderautomater
-├── vattenautomater.html    # 7 vattenautomater
-├── varmeplattor.html       # 5 värmeplattor
-├── guider.html             # Hub-sida för alla guider
-├── om.html                 # Om sidan, metodik, affiliate-policy
-├── 404.html                # Anpassad 404 med hönsanimation
-├── guide/
-│   ├── skaffa-hons.html    # Nybörjarguide
-│   ├── bygga-honshus.html  # DIY-guide
-│   ├── hons-pa-vintern.html
-│   ├── skydda-hons-mot-rav.html
-│   ├── vad-kostar-hons.html
-│   ├── honsraser.html
-│   ├── chickenguard-vs-kerbl.html
-│   └── run-chicken-t50.html
-├── css/
-│   ├── style.css           # Minifierad (production)
-│   └── style.src.css       # Källa (editera denna, minifiera sedan)
-├── js/
-│   ├── main.js             # Minifierad (production)
-│   ├── main.src.js         # Källa (editera denna)
-│   └── comparison.js       # Tabell-fallback för lucköppnare
-├── img/photos/             # Egna bilder i WebP
-├── sitemap.xml
-└── robots.txt
+├── index.html
+├── luckoppnare.html
+├── honshus.html
+├── foder.html
+├── vatten.html
+├── varme.html
+├── om-mig.html
+├── css/style.css
+├── js/main.js          (medvetet minimal — inget ramverk)
+├── img/photos/         (egna foton)
+└── luckoppnare/
+    ├── okkobi-solar.html
+    ├── omlet-smart.html
+    └── ...
 ```
 
-### Minifiering
-Editera ALLTID `.src.`-filerna, sedan minifiera:
-```bash
-cd docs
-npx clean-css-cli css/style.src.css -o css/style.css
-npx terser js/main.src.js -o js/main.js --compress --mangle
-```
+**Inga ramverk. Ingen build-pipeline.** Skriv ren HTML som fungerar utan JS.
+JS får finnas men ska aldrig vara nödvändigt för att läsa innehållet.
 
----
+## Röst — gör så här
 
-## DESIGN
+- Skriv som en person, inte som en publikation. "Jag" och "du", aldrig "vi" eller "man".
+- Korta meningar. Och sen längre meningar med komma och eftertanke när det krävs.
+- Specifika tal och datum istället för runda. "Monterade i juni 2025" inte "förra året".
+- Erkänn det jag inte vet. "Jag har inte testat den" är en giltig och värdefull formulering.
+- Visa när jag ändrat mig. "Jag trodde X, sen läste jag Y, nu tror jag Z."
+- Ärlig om pengar. Affiliatelänkar nämns rakt ut, gärna i körtexten.
+- Svenska som låter talad, inte SEO-svenska. "Tjafsa", "klippet", "småaktigt".
+  Engelska låneord får finnas: "tractor coop", "anti-pinch" — använd dem om de
+  är så jag faktiskt sa det.
+- Aldrig superlativer utan grund. Inte "bäst i test 2026". Hellre "den jag har själv".
+- Aldrig emoji.
 
-### Tonen: "Scandinavisk Homestead Editorial"
-Kinfolk × Wirecutter × Granit. Varmt, personligt, datadrivet. INTE tech-startup, INTE generisk Tailwind, INTE AI-slop.
+## Röst — gör INTE så här
 
-### Typografi — extremer
-- **Display:** Fraunces 900, clamp(2.4rem→3.8rem), letter-spacing -0.03em
-- **Rubriker:** h2 vid 800, h3/h4 vid 700
-- **Labels:** Instrument Sans 200, uppercase, 0.14em spacing
-- **Brödtext:** Instrument Sans 400, 17px, 1.65 line-height
-- **Pull quotes:** Fraunces 300 italic med terracotta border-left
-- **Score badges:** Fraunces 900
+- Inga "I dagens snabbrörliga värld..."-intros.
+- Inga "Det finns många faktorer att tänka på"-fyllord.
+- Inga symmetriska 3-listor när 1 eller 2 punkter räcker.
+- Inga generiska expertcitat. Antingen riktiga citat med källa, eller inga.
+- Inga emoji-rubriker.
+- Inga "ultimativa guider" eller "allt du behöver veta".
+- Inga försök att vara rolig eller flörtig — torra konstateranden är funnier.
 
-Kontrasten mellan 200-labels och 900-rubriker är medveten. Inga mellanvikter (500-600) — hoppa mellan tunna och tunga.
+## Saker jag faktiskt har / vet (uppdatera när det ändras)
 
-### Färg — dominant + skarp
-```css
---bg-primary: #FDFBF7;        /* Varm äggskals-vit */
---bg-secondary: #F0EBE3;       /* Sand */
---text-primary: #2C2416;       /* Varm brun, inte svart */
---text-secondary: #5C4F3D;
---text-tertiary: #9C8E7E;
---accent-primary: #C4653A;     /* TERRACOTTA — dominant accent */
---accent-secondary: #2D5A3F;   /* Djup mossgrön */
---accent-highlight: #D4A84B;   /* Guld */
-```
+- **Lucköppnare:** Okköbi Solar. Monterad juni 2025. Solpanel på sydsidan,
+  lucka nere. 780 kr. 5 års garanti. Manualen är på Google-svenska.
+- **Hönshus:** byggt själv, juni–augusti 2025. Tractor-modell på hjul.
+  4–6 höns, 12 mm plywood, målat gulvitt. Dottern hjälpte måla två sidor.
+- **Granne Göran:** villaägare bredvid, INGA egna höns, säger ja mot ägg.
+  (Tidigare versioner av sajten påstod fel — kolla alltid om du är osäker.)
+- **Foder:** testar Granngården pellets vs Lantmännen helsäd. Oklart vilken vinner.
+- **Vatten:** 5L plastdropp. Fryser vid −5 °C. Olöst problem.
+- **Webbkamera:** inte än. På gång.
+- **Klimat:** Örebro. −5 till −10 vanliga vinterdagar, ibland −20.
 
-INGEN generisk #222/#555. Ingen Inter/Roboto/systemfonter.
+## Visuell stil — Field Journal
 
-### Bakgrunder — gradienter, inte platt
-- Hero: `linear-gradient(180deg, --bg-secondary → --bg-primary)`
-- Page headers: samma gradient
-- Cover cards: fyllda gradienter (terracotta/mossgrön) med vit text
-- Newsletter: gradient-block med rundade hörn
-- Footer: solid --bg-secondary
+Vald riktning: anteckningsbok som blivit publik. Marginal-anteckningar,
+polaroid-foton, handritade markeringar.
 
-### Animation
-- Staggered fade-in vid sidladdning (100ms delay, translateY 16px)
-- Intersection Observer för scroll-reveal
-- Back-to-top-knapp efter 500px scroll
-- INGA: parallax, particles, cursor-followers, scroll-jacking
+**Färger (CSS-variabler i `css/style.css`):**
+- `--paper: #faf6ec` (gräddvit bakgrund)
+- `--ruled: #eadfc4` (faint horizontella linjer)
+- `--ink: #1c1814` (huvudtext)
+- `--faint: #7a7160` (sekundär text)
+- `--marker: #bf4a1f` (tegel-orange accent)
+- `--green: #365a3a` ("min" / godkänt)
 
----
+**Typografi:**
+- Rubriker: `"GT Sectra", "EB Garamond", Charter, Georgia, serif`
+- Brödtext: samma serif
+- UI / labels: `"Söhne", "Inter", "Helvetica Neue", sans-serif`
+- Hand-anteckningar: `"Caveat", "Patrick Hand", cursive`
 
-## RÖST & TON
+**Element som finns i `style.css`:**
+- `.paper` — sidbakgrund med faint ruled lines
+- `.polaroid` — vit ram, rotation, bildtext under
+- `.margin-note` — handskrift, roterad, marker-färg
+- `.hand-underline` — SVG-underline
+- `.product` — listrad med #-nummer, stjärnor, kropp, pris
+- `.status-box` — vit ruta med "vad jag har just nu"
 
-### Jag, inte vi
-Sajten skrivs i första person singularis. "Jag har testat", "Jag jämför", "Det här hade jag velat veta". ALDRIG "vi på Hönsguiden anser" eller "Hönsguiden-redaktionen rekommenderar".
+**Foton:** alltid mina egna. En suddig bild från trädgården är värd mer än en
+stockbild på en perfekt höna. `img/photos/` har 11 stycken just nu.
 
-### Undvik AI-språk
-- ❌ "Komplett guide", "Allt du behöver veta", "Upptäck"
-- ❌ "Oberoende, datadrivna jämförelser"
-- ❌ "Beprövade metoder rangordnade efter effektivitet"
-- ❌ "Direkt i inkorgen"
-- ✅ "Det här hade jag velat veta"
-- ✅ "Vad som faktiskt funkar"
-- ✅ "Vad jag faktiskt lade ut"
+## När jag ber om en ny sida
 
-### Affiliate-disclaimer
-Kort och ärlig: "Vissa länkar ger mig provision. Det ändrar inte vilken produkt som hamnar högst."
+1. **Skriv texten först.** Som ett kort blogginlägg, i min röst. Vänta på att
+   jag säger "ok" innan du gör HTML.
+2. **Layouten bygger på texten** — inte tvärtom. Ingen tabell innan paragrafen
+   som introducerar tabellen.
+3. **Återanvänd klasser från `style.css`.** Lägg inte till nya färger eller
+   fonter utan att fråga.
+4. **Inga ikoner** för varje punkt. Typografin räcker.
+5. **Footer på varje sida:** "Gabriel · Örebro · forskar om småskaligt lantbruk"
+   och "Skriv till mig: hej@honsguiden.se" och datum för senast uppdaterad.
 
----
+## När jag ber om ändringar i en befintlig sida
 
-## JÄMFÖRELSESIDOR — MÖNSTER
-
-Varje jämförelsesida har denna struktur (uppifrån och ner):
-1. **Breadcrumb** + h1 + datum + affiliate-disclaimer
-2. **"Har du bråttom?"** — snabbval med 2 rekommendationer
-3. **Jämförelsetabell** — sortbar, filtrerbar (lucköppnare), med "Se pris →"-knappar i sista kolumnen
-4. **Produktkort** (product-detail-grid) — bild/SVG, score, specs, reviews, review-links, köpknappar
-5. **"Så har jag jämfört"** — metodik
-6. **FAQ** — details/summary-element med FAQPage schema
-7. **"Läs mer"** — relaterade guider/jämförelser
-
-### Köplänkar
-- Amazon.se med `tag=honsguiden-21` där tillgängligt
-- Svenska butiker (Granngården, Bole, Bonden, Lantkompaniet, Lantbutiken)
-- `rel="sponsored nofollow noopener noreferrer" target="_blank"` på alla affiliate-länkar
-- ALDRIG länka till kategorisidor — alltid specifika produktsidor
-- Om produkt ej tillgänglig: `<span class="btn btn-secondary" style="opacity:0.5;cursor:default">Ej tillgänglig online</span>`
-
-### Review-links
-Varje produkt ska ha en `<div class="review-links">` med externa hands-on-recensioner (expert, blogg, video, forum). Prioritera:
-1. Svenska recensioner
-2. Dedicerade single-product reviews (Chicken Fans, Poultry Keeper)
-3. YouTube-tester
-4. Forum (BackYard Chickens, Bukefalos)
-
----
-
-## SEO
-
-### Titlar
-Max 60 tecken. Inkludera år (2026). Unika per sida.
-
-### Structured data (JSON-LD)
-- **Alla sidor:** BreadcrumbList
-- **Jämförelsesidor:** Article + ItemList (produkter) + FAQPage
-- **Guider:** Article + FAQPage
-- **Startsida:** WebSite + Organization + FAQPage
-- **Om:** AboutPage
-
-### dateModified
-Uppdatera `article:modified_time` OG-tag OCH JSON-LD `dateModified` när en sida ändras.
-
-### Breadcrumbs
-Guide-sidor: Hönsguiden → Guider → [Guidnamn]
-"Guider" pekar på `/guider.html` (INTE `/guide/` som inte finns).
-
----
-
-## ANALYTICS
-
-### Worker: honsguiden-analytics.smakfynd.workers.dev
-- `POST /api/hit` — sidvisning (page, referrer, land, enhet)
-- `POST /api/event` — klick (produkt+butik), scroll-djup, tid på sida, FAQ-öppningar
-- `GET /stats?pw=...` — live dashboard
-- `GET /report?pw=...` — veckorapport
-- Cron: måndag 07:00 UTC → veckorapport via email till gabriel.linton@gmail.com
-
-### Frontend-spårning (main.js)
-- Sidvisning vid load
-- Köpknapp-klick med produkt + butik
-- Scroll-djup (25/50/75/100%)
-- Tid på sida (sendBeacon vid unload)
-- FAQ-öppningar
-
----
-
-## ACCESSIBILITY
-
-- Skip-link på alla sidor
-- `aria-label` på score badges ("Betyg: 8.5 av 10") och check/cross-celler ("Ja"/"Nej")
-- Alla bilder har alt-text
-- `prefers-reduced-motion` respekteras
-- Focus-visible på alla interaktiva element
-- Emoji-favicon (🐔) — apple-touch-icon på alla sidor
-
----
-
-## STRATEGI
-
-Se `STRATEGY.md` för komplett färdplan (Fas 1-3), monetarisering och nyckeltal.
+Om jag ber dig ändra något smått: gör bara den ändringen. Återanvänd, expandera
+inte. Det här är en personlig sajt, inte en plattform.
