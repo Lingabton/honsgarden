@@ -512,6 +512,24 @@ footer.site .write {
   color: var(--ink);
 }
 
+/* Homepage hero */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+/* Mobile: smaller h1, stack hero grid */
+@media (max-width: 700px) {
+  h1 { font-size: 32px; }
+  .lede { font-size: 17px; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-grid aside { height: auto !important; position: static !important; display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-grid .polaroid { position: static !important; width: 160px !important; }
+}
+
 /* Utility */
 .hand { font-family: var(--hand); }
 .muted { color: var(--faint); }
